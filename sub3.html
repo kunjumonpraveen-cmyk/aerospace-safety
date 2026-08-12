@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06080c">
+<meta name="description" content="Aerospace Safety — Subject 3: Fundamentals of Aircraft and Spacecraft">
+<title>Sub 3 — Fundamentals of Aircraft and Spacecraft</title>
+<style>
+
+:root{--bg:#06080c;--paper:#0c1117;--panel:#111822;--ink:#edf1f4;--muted:#89939d;--line:#26313b;--fire:#ff5a1f;--gold:#ffb24a;--cyan:#7ce7ff;--green:#8dffad}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.82}.grain{position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:30;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{position:fixed;top:0;left:0;right:0;height:72px;z-index:20;background:#06080ce8;backdrop-filter:blur(16px);border-bottom:1px solid #172029;display:flex;justify-content:space-between;align-items:center;padding:0 5vw}.brand{color:#fff;text-decoration:none;font:10px monospace;letter-spacing:.14em}.brand b{color:var(--fire)}.back{color:#89939d;text-decoration:none;font:10px monospace}.back:hover{color:#fff}
+.hero{min-height:82vh;padding:150px 8vw 80px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 45%,#291108 0,transparent 30%),radial-gradient(circle at 90% 20%,#10252c 0,transparent 22%)}.hero:after{content:"";position:absolute;width:680px;height:680px;border:1px solid #27323b;border-radius:50%;right:-180px;top:10%;transform:rotate(28deg)}.hero-content{position:relative;z-index:2;max-width:1000px}.eyebrow,.section-kicker{font:10px monospace;letter-spacing:.2em;color:#77828d}.hero h1{font-size:clamp(52px,9vw,130px);line-height:.84;letter-spacing:-.075em;margin:18px 0}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px #aab3bb}.hero p{max-width:760px;color:#9aa4ad;font-size:18px}.meta{display:flex;gap:28px;margin-top:45px;flex-wrap:wrap}.meta div{border-left:1px solid #39434d;padding-left:13px}.meta strong{display:block;font-size:25px}.meta span{font:9px monospace;color:#68737d;letter-spacing:.1em}
+.layout{max-width:1450px;margin:auto;padding:80px 6vw;display:grid;grid-template-columns:260px minmax(0,1fr);gap:70px}.toc{position:sticky;top:100px;align-self:start;border:1px solid #202a34;background:#0a0e13;padding:20px;max-height:calc(100vh - 130px);overflow:auto}.toc-title{font:10px monospace;color:var(--fire);letter-spacing:.16em;margin-bottom:15px}.toc a{display:flex;gap:12px;padding:8px 0;color:#7f8993;text-decoration:none;font:11px/1.35 monospace;border-bottom:1px solid #141b22}.toc a span{color:#46515c}.toc a:hover{color:#fff}.reader{min-width:0}.reader section{padding:0 0 100px;margin-bottom:95px;border-bottom:1px solid #1c252e}.reader h2{font-size:clamp(34px,5vw,66px);line-height:.98;letter-spacing:-.055em;margin:15px 0 35px;max-width:900px}.reader p{font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.9;color:#c1c8ce;max-width:850px;margin:0 0 24px}.reader svg{display:block;width:100%;height:auto;margin:48px 0;border:1px solid #202a34;background:#0d1118}.assessment{background:linear-gradient(145deg,#111720,#0b0f14);padding:38px;border:1px solid #26313b}.assessment h2{margin-top:0}.footer{padding:40px 6vw;border-top:1px solid #172029;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:9px monospace;color:#68737d;letter-spacing:.1em}.signature{color:#b8c0c7}.signature b{color:#fff}
+@media(max-width:900px){.layout{display:block;padding:50px 6vw}.toc{position:relative;top:auto;max-height:300px;margin-bottom:55px}.hero{min-height:75vh;padding:140px 6vw 65px}.hero:after{right:-480px}.reader p{font-size:17px}.reader section{padding-bottom:70px;margin-bottom:70px}}
+
+.study-matter p{font-size:1.04rem;line-height:1.9;max-width:900px;color:#cbd3d9;margin:0 0 1.25rem}
+.technical-plate{margin:2rem 0 2.5rem;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.technical-plate svg{display:block;width:100%;height:auto}
+.exam-focus{border-left:3px solid #ffb24a;padding:1rem 1.25rem;margin-top:2rem;background:rgba(255,178,74,.035)}
+.exam-focus strong{font-family:monospace;font-size:.78rem;letter-spacing:.12em;color:#ffb24a}
+.exam-focus p{margin:.55rem 0 0;color:#aeb8c0}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<nav class="nav">
+<a class="brand" href="index.html">PROJECT SAFETY 200 · AEROSPACE SAFETY</a>
+<a class="back" href="index.html">← BACK TO LIBRARY</a>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+<div class="eyebrow">SUBJECT 03 · FOUNDATION · 100 MARKS</div>
+<h1>FUNDAMENTALS OF<br><em>AIRCRAFT AND SPACECRAFT</em></h1>
+<p>A complete foundation in the physical principles, environments, vehicles and systems required before studying aerospace safety engineering.</p>
+<div class="meta">
+<div><strong>03</strong><span>SUBJECT</span></div>
+<div><strong>100</strong><span>MARKS</span></div>
+<div><strong>36</strong><span>TOPICS</span></div>
+<div><strong>36</strong><span>SVG PLATES</span></div>
+</div>
+</div>
+</header>
+
+<div class="layout">
+<aside class="toc">
+<div class="toc-title">CONTENTS · 36 TOPICS</div>
+<a href="#s1"><span>01</span>What Is an Aircraft?</a>
+<a href="#s2"><span>02</span>What Is a Spacecraft?</a>
+<a href="#s3"><span>03</span>Aeronautics and Astronautics</a>
+<a href="#s4"><span>04</span>Aircraft and Spacecraft: Fundamental Differences</a>
+<a href="#s5"><span>05</span>The Earth&#x27;s Atmosphere</a>
+<a href="#s6"><span>06</span>Atmospheric Pressure, Density and Temperature</a>
+<a href="#s7"><span>07</span>Gravity and Weight</a>
+<a href="#s8"><span>08</span>The Four Forces of Flight</a>
+<a href="#s9"><span>09</span>Lift: Fundamental Concept</a>
+<a href="#s10"><span>10</span>Drag: Fundamental Concept</a>
+<a href="#s11"><span>11</span>Thrust and Propulsion</a>
+<a href="#s12"><span>12</span>Aircraft Weight and Mass</a>
+<a href="#s13"><span>13</span>Balance and Centre of Gravity</a>
+<a href="#s14"><span>14</span>Stability and Control</a>
+<a href="#s15"><span>15</span>Aircraft Flight Envelope</a>
+<a href="#s16"><span>16</span>Speed, Mach Number and Altitude</a>
+<a href="#s17"><span>17</span>Climb, Cruise and Descent</a>
+<a href="#s18"><span>18</span>Approaching the Edge of the Atmosphere</a>
+<a href="#s19"><span>19</span>The Space Environment</a>
+<a href="#s20"><span>20</span>Vacuum and Microgravity</a>
+<a href="#s21"><span>21</span>Orbital Motion</a>
+<a href="#s22"><span>22</span>Orbit, Altitude and Velocity</a>
+<a href="#s23"><span>23</span>Launch and Ascent</a>
+<a href="#s24"><span>24</span>Re-entry and Atmospheric Heating</a>
+<a href="#s25"><span>25</span>Spacecraft Structure</a>
+<a href="#s26"><span>26</span>Spacecraft Propulsion</a>
+<a href="#s27"><span>27</span>Power and Energy Systems</a>
+<a href="#s28"><span>28</span>Thermal Control</a>
+<a href="#s29"><span>29</span>Communication and Navigation</a>
+<a href="#s30"><span>30</span>Life-Support and Crew Systems</a>
+<a href="#s31"><span>31</span>Space Suits and Human Survival</a>
+<a href="#s32"><span>32</span>Crewed vs Uncrewed Vehicles</a>
+<a href="#s33"><span>33</span>Aircraft, Spacecraft and Hybrid Vehicles</a>
+<a href="#s34"><span>34</span>Why Aerospace Vehicles Are Fundamentally Different</a>
+<a href="#s35"><span>35</span>The Aerospace Operating Environment</a>
+<a href="#s36"><span>36</span>Why These Fundamentals Matter to Aerospace Safety</a>
+</aside>
+<main class="reader">
+<section id="s1">
+<div class="section-kicker">SUBJECT 03 · 01</div>
+<h2>What Is an Aircraft?</h2>
+<div class="study-matter"><p>An aircraft is a vehicle capable of sustained or controlled flight through the atmosphere by using aerodynamic forces. The term includes many configurations, from small training aeroplanes and gliders to transport aircraft, helicopters and specialised unmanned vehicles. Although their shapes and propulsion systems differ, aircraft share a basic requirement: the vehicle must generate and control forces and moments that allow it to remain airborne and follow a desired flight path.</p><p>The atmosphere is therefore not merely the background in which an aircraft operates. It is part of the physical system. A wing, rotor or other lifting surface interacts with moving air to produce aerodynamic forces. Propulsion supplies energy and thrust, while the structure carries aerodynamic, inertial and operational loads. Flight controls change the orientation and magnitude of these forces so that the aircraft can climb, descend, turn, accelerate, decelerate or maintain a selected condition.</p><p>An aircraft can be understood as an integrated system rather than simply a flying machine. Its structure, propulsion, flight controls, electrical and hydraulic systems, avionics, landing gear, fuel system and human interfaces must work together. A failure that appears to belong to one subsystem can therefore affect the behaviour of the complete vehicle.</p><p>From a safety perspective, this systems view is fundamental. Safe aircraft operation depends on maintaining sufficient control authority, structural integrity, propulsion capability and situational awareness within the approved operating envelope. Understanding what an aircraft is provides the foundation for understanding why failures become hazardous.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="What Is an Aerospace Vehicle?"><title>What Is an Aerospace Vehicle?</title><desc>Vehicles designed to operate in air, space, or the transition between them</desc>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker><marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker><linearGradient id="metal"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient></defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/><text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text><text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">What Is an Aerospace Vehicle?</text><text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Vehicles designed to operate in air, space, or the transition between them</text><g transform="translate(60 155)">
+<path d="M60 350Q300 250 540 300T1080 170" fill="none" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M60 440Q300 350 540 395T1080 265" fill="none" stroke="#33404b" stroke-width="2"/>
+<path d="M600 520V165" stroke="#ffb24a" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M80 330L330 250L510 285L330 315Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M330 250L210 165L360 245" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M690 235L760 150L820 230L760 310Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M760 150V90M760 310V360" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M930 120L1010 75L1050 125L980 175Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<circle cx="620" cy="330" r="10" fill="#ff5a1f"/></g><text x="85" y="480" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ATMOSPHERIC FLIGHT</text><text x="680" y="420" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TRANSITION</text><text x="900" y="70" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">SPACE</text><text x="620" y="145" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">ALTITUDE / OPERATING ENVIRONMENT</text><text x="90" y="575" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">AIRCRAFT</text><text x="690" y="395" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">LAUNCH / RE-ENTRY</text><text x="915" y="210" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">SPACECRAFT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s2">
+<div class="section-kicker">SUBJECT 03 · 02</div>
+<h2>What Is a Spacecraft?</h2>
+<div class="study-matter"><p>A spacecraft is a vehicle designed to operate beyond the conventional atmosphere, where aerodynamic flight is no longer the primary means of support or control. Spacecraft include satellites, crewed vehicles, robotic probes, orbital laboratories and vehicles used for transportation between different regions of space.</p><p>Unlike an aircraft, a spacecraft cannot normally rely on wings to remain aloft. Its motion is governed predominantly by gravity and orbital mechanics. Small propulsion systems are used to change velocity, alter attitude, perform rendezvous manoeuvres, maintain an orbit or initiate a departure or re-entry trajectory. Attitude-control systems orient the vehicle so that antennas, sensors, engines and thermal surfaces can perform their functions correctly.</p><p>The space environment imposes conditions that are unfamiliar to ordinary terrestrial vehicles. There is essentially no surrounding atmosphere for conventional cooling or aerodynamic control. Vacuum affects materials, lubricants, seals and human life support. Radiation can degrade electronics and materials. Large temperature differences can develop between illuminated and shaded surfaces. Micrometeoroids and orbital debris can create high-energy impact hazards.</p><p>A spacecraft is consequently a collection of tightly coupled subsystems: structure, propulsion, power, thermal control, communications, guidance and navigation, avionics, payloads and, for crewed vehicles, environmental control and life-support systems. Spacecraft safety depends on controlling failures across these interacting systems while retaining sufficient capability to complete the mission or protect the crew.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="What Is an Aircraft?">
+<title>What Is an Aircraft?</title><desc>An aircraft is a vehicle designed to generate useful aerodynamic forces in an atmosphere.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">What Is an Aircraft?</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">An aircraft is a vehicle designed to generate useful aerodynamic forces in an atmosphere.</text>
+<g transform="translate(70 165)">
+<path d="M70 330Q320 255 760 290L1020 330L760 365Q320 385 70 340Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M410 292L180 135L445 270L650 135L530 305" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M790 300L960 225L885 320" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<circle cx="150" cy="330" r="45" fill="none" stroke="#ffb24a" stroke-width="4"/>
+<path d="M1030 330H1135" stroke="#ff5a1f" stroke-width="6" marker-end="url(#a)"/>
+<path d="M370 275V175" stroke="#7ce7ff" stroke-width="3" marker-end="url(#c)"/></g>
+<text x="115" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">AERODYNAMIC VEHICLE</text><text x="325" y="155" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">LIFT</text><text x="980" y="305" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">THRUST</text><text x="690" y="205" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">CONTROL SURFACES</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s3">
+<div class="section-kicker">SUBJECT 03 · 03</div>
+<h2>Aeronautics and Astronautics</h2>
+<div class="study-matter"><p>Aerospace engineering is commonly divided into aeronautics and astronautics. Aeronautics concerns vehicles operating within an atmosphere, while astronautics concerns vehicles and missions operating in space. The distinction is useful because the dominant physical phenomena in the two regimes are different, even though many engineering disciplines are shared.</p><p>Aeronautical vehicles depend strongly on atmospheric properties. Air density, pressure, temperature and viscosity influence lift, drag, propulsion performance and structural loads. Aircraft use aerodynamic surfaces, rotors or other devices to exchange momentum with the surrounding air. Their trajectories are consequently shaped by the interaction between vehicle motion and the atmosphere.</p><p>Astronautical vehicles operate primarily under gravitational and orbital mechanics. Once outside the dense atmosphere, aerodynamic forces become negligible for most missions. A spacecraft can therefore continue moving without continuously producing aerodynamic lift. Its trajectory is changed by applying relatively small changes in velocity at carefully selected times.</p><p>The two disciplines share structures, materials, propulsion, control engineering, electronics, software, human factors and systems engineering. However, the design margins and failure modes can be very different. A conventional aircraft may experience aerodynamic stall, icing and engine flameout; a spacecraft may face vacuum exposure, loss of attitude control, thermal imbalance or orbital collision risk.</p><p>For aerospace safety, understanding this distinction prevents inappropriate transfer of assumptions. A safety method developed for atmospheric flight may require substantial modification before it is applied to a spacecraft.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Fixed-Wing Aircraft">
+<title>Fixed-Wing Aircraft</title><desc>Wing lift, fuselage, tail and propulsion</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Fixed-Wing Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Wing lift, fuselage, tail and propulsion</text>
+<g transform="translate(70 155)">
+<path d="M70 315Q330 260 690 280L920 315L690 350Q330 365 70 325Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M390 285L180 135L430 265L610 145L500 300" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M720 295L900 220L820 315" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<circle cx="160" cy="320" r="43" fill="none" stroke="#ffb24a" stroke-width="4"/>
+<path d="M920 315H1080" stroke="#ff5a1f" stroke-width="6" marker-end="url(#arr)"/>
+<path d="M320 275V175" stroke="#7ce7ff" stroke-width="3" marker-end="url(#cyan)"/></g><text x="160" y="500" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">WING / LIFT</text><text x="720" y="205" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TAIL</text><text x="950" y="300" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">THRUST</text><text x="330" y="155" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">LIFT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s4">
+<div class="section-kicker">SUBJECT 03 · 04</div>
+<h2>Aircraft and Spacecraft: Fundamental Differences</h2>
+<div class="study-matter"><p>Aircraft and spacecraft are both aerospace vehicles, but they operate under fundamentally different physical conditions. An aircraft normally depends on the atmosphere to generate lift and to provide a medium through which propulsion operates. A spacecraft normally operates where the atmosphere is extremely thin or absent and therefore relies on gravitational dynamics, propulsion and attitude control.</p><p>Aircraft are continuously exposed to aerodynamic forces. Increasing airspeed generally increases dynamic pressure, while changing angle of attack changes the aerodynamic forces acting on the vehicle. Spacecraft in orbit can experience almost no aerodynamic force, yet they remain in motion because orbital velocity and gravitational acceleration combine to produce a continuous free-fall trajectory.</p><p>The energy management problem is also different. An aircraft continuously exchanges energy between altitude, airspeed and propulsion. A spacecraft may use a relatively brief propulsion event to change its orbital energy, after which it can coast for a long period. A small velocity change can eventually produce a large change in orbital position.</p><p>Thermal behaviour is another major difference. Aircraft can reject substantial heat to the atmosphere through convection and can use aerodynamic airflow for cooling. Spacecraft primarily reject heat through radiation, making thermal design a critical subsystem.</p><p>These differences create different safety problems. Aircraft safety is strongly influenced by aerodynamic control, structural loads, propulsion reliability and the atmospheric environment. Spacecraft safety adds vacuum, radiation, orbital debris, long-duration autonomy and severe limitations on physical access and repair.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="What Is a Spacecraft?">
+<title>What Is a Spacecraft?</title><desc>A spacecraft is designed primarily for operation beyond the atmosphere.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">What Is a Spacecraft?</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">A spacecraft is designed primarily for operation beyond the atmosphere.</text>
+<g transform="translate(100 155)">
+<path d="M390 290Q480 170 650 235L790 315L650 375Q480 425 390 290Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M530 240L400 105L555 225M620 355L500 500L650 370" stroke="#d8dfe4" stroke-width="3"/>
+<rect x="785" y="230" width="250" height="150" fill="#111a22" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M815 270H1000M815 315H1000M815 355H1000" stroke="#7ce7ff" stroke-width="2"/>
+<path d="M390 290L160 200M390 330L150 420" stroke="#ffb24a" stroke-width="5"/></g>
+<text x="785" y="205" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">POWER / THERMAL / AVIONICS</text><text x="125" y="180" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">COMMUNICATION / ATTITUDE</text><text x="425" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">STRUCTURE + PROPULSION</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s5">
+<div class="section-kicker">SUBJECT 03 · 05</div>
+<h2>The Earth&#x27;s Atmosphere</h2>
+<div class="study-matter"><p>Earth&#x27;s atmosphere is the gaseous envelope surrounding the planet and is the operating medium for most aeronautical vehicles. It is composed primarily of nitrogen and oxygen with smaller quantities of argon, carbon dioxide, water vapour and other gases. Its properties vary with altitude, latitude, season, weather and local conditions.</p><p>For aerospace engineering, the atmosphere is important because it provides both useful and harmful effects. It provides the air through which wings and rotors generate aerodynamic forces and through which many engines obtain oxidant. At the same time, it produces drag, turbulence, icing, precipitation, wind shear and aerodynamic heating at high speed.</p><p>Atmospheric density decreases substantially with increasing altitude. This affects lift because aerodynamic force depends on dynamic pressure. At a given true airspeed, an aircraft operating at higher altitude generally encounters lower density and therefore produces less aerodynamic force for the same configuration. Engines also experience changes in performance because the mass flow of air changes with density.</p><p>The atmosphere is not a uniform fluid. Its temperature and pressure profiles influence aircraft performance, engine operation, altimetry and human physiology. Weather systems introduce additional variability that must be considered during flight planning.</p><p>The atmosphere also provides the medium through which an aircraft can dissipate heat and, during emergencies such as an engine failure, continue to generate aerodynamic lift. Understanding atmospheric behaviour is therefore fundamental to both aircraft performance and safety.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aeronautics and Astronautics">
+<title>Aeronautics and Astronautics</title><desc>The two domains share engineering principles but operate in radically different environments.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Aeronautics and Astronautics</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">The two domains share engineering principles but operate in radically different environments.</text>
+<path d="M600 150V520" stroke="#39444f" stroke-width="3"/>
+<path d="M80 400Q250 270 520 315" fill="none" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M680 320Q820 190 1080 125" fill="none" stroke="#ffb24a" stroke-width="4"/>
+<path d="M180 365L390 300L480 320L390 345Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M850 250L920 175L975 250L925 310Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<text x="170" y="460" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="18">AERONAUTICS</text><text x="730" y="460" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="18">ASTRONAUTICS</text><text x="110" y="235" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ATMOSPHERE</text><text x="880" y="115" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">SPACE</text><text x="505" y="545" text-anchor="start" fill="#8dffad" font-family="monospace" font-size="14">SHARED ENGINEERING · DIFFERENT ENVIRONMENT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s6">
+<div class="section-kicker">SUBJECT 03 · 06</div>
+<h2>Atmospheric Pressure, Density and Temperature</h2>
+<div class="study-matter"><p>Pressure, density and temperature are three fundamental atmospheric properties that strongly influence aircraft behaviour. Pressure is the force exerted by the surrounding gas per unit area. Density describes the amount of mass contained in a given volume. Temperature represents the thermal state of the gas and affects both pressure-density relationships and the speed of sound.</p><p>For an idealised gas, pressure, density and temperature are related by the equation p = ρRT, where p is pressure, ρ is density, R is the specific gas constant and T is absolute temperature. This relationship is important because an aircraft does not respond simply to altitude; it responds to the actual properties of the air surrounding it.</p><p>Dynamic pressure is particularly important in flight. It is commonly expressed as q = 1/2 ρV², where V is true airspeed. Aerodynamic lift and drag are strongly related to dynamic pressure. If density falls, the aircraft generally needs greater true airspeed or a different aerodynamic configuration to produce the same force.</p><p>Temperature also influences engine performance and the speed of sound. In a hot atmosphere, density may be lower than under standard conditions at the same pressure altitude. This can increase take-off distance and reduce engine and aerodynamic performance.</p><p>These properties are therefore not academic quantities. They directly affect runway performance, climb capability, stall behaviour, engine output, indicated airspeed interpretation and high-altitude operations.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Rotary-Wing Aircraft">
+<title>Rotary-Wing Aircraft</title><desc>Rotor disk, fuselage, tail rotor and control</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Rotary-Wing Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Rotor disk, fuselage, tail rotor and control</text>
+<g transform="translate(100 145)">
+<path d="M280 310Q430 250 650 290L780 325L650 350Q430 370 280 325Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M470 285V150" stroke="#d8dfe4" stroke-width="7"/><path d="M220 150Q470 95 720 150" fill="none" stroke="#d8dfe4" stroke-width="8"/>
+<path d="M470 150L235 105M470 150L705 105" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M700 300L900 220M700 340L900 410" stroke="#d8dfe4" stroke-width="5"/>
+<path d="M900 220L950 185M900 410L950 445" stroke="#ffb24a" stroke-width="3"/></g><text x="420" y="85" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">ROTOR DISC</text><text x="865" y="180" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">TAIL ROTOR</text><text x="300" y="430" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ROTARY LIFT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s7">
+<div class="section-kicker">SUBJECT 03 · 07</div>
+<h2>Gravity and Weight</h2>
+<div class="study-matter"><p>Gravity is the attractive force between masses. Near Earth&#x27;s surface, gravitational acceleration is approximately 9.81 m/s², although its exact value varies slightly with location and altitude. In aircraft engineering, the force produced by gravity acting on the aircraft&#x27;s mass is called weight.</p><p>The relationship is expressed as W = mg, where W is weight, m is mass and g is gravitational acceleration. Mass is an intrinsic measure of the amount of matter in the vehicle, whereas weight depends on the local gravitational field. This distinction becomes particularly important when comparing aircraft operations with spaceflight.</p><p>Aircraft must generate sufficient upward aerodynamic force to counteract their weight during steady level flight. If lift becomes less than weight without a corresponding change in trajectory, the aircraft begins to lose altitude. During manoeuvres, apparent loading can be much greater than the vehicle&#x27;s static weight because acceleration produces additional forces.</p><p>Gravity also dominates spacecraft trajectories. An orbit is not an absence of gravity; rather, the spacecraft is continuously accelerating toward the central body while its tangential velocity causes it to keep missing the surface. This is why orbital flight is often described as continuous free fall.</p><p>Understanding gravity and weight is essential to analysing take-off, climb, descent, manoeuvring loads, payload limits, launch performance, orbital motion and re-entry.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft and Spacecraft: Fundamental Differences">
+<title>Aircraft and Spacecraft: Fundamental Differences</title><desc>Atmosphere, gravity, pressure and heat make the operating domains fundamentally different.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Aircraft and Spacecraft: Fundamental Differences</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Atmosphere, gravity, pressure and heat make the operating domains fundamentally different.</text>
+<g transform="translate(80 170)">
+<rect x="40" y="50" width="430" height="330" rx="20" fill="#111922" stroke="#7ce7ff" stroke-width="3"/>
+<rect x="650" y="50" width="430" height="330" rx="20" fill="#0d1117" stroke="#ffb24a" stroke-width="3"/>
+<path d="M90 315Q250 220 420 275" fill="none" stroke="#d8dfe4" stroke-width="6"/>
+<path d="M170 270L260 220L350 265L260 295Z" fill="#1b2730" stroke="#d8dfe4"/>
+<circle cx="865" cy="220" r="80" fill="none" stroke="#39444f" stroke-width="2"/><path d="M865 140L940 185L915 285L830 300L790 220Z" fill="#121a22" stroke="#d8dfe4" stroke-width="3"/>
+</g><text x="130" y="270" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">AIRFLOW / LIFT</text><text x="705" y="270" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">VACUUM / ORBIT</text><text x="145" y="440" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PRESSURE · DENSITY · DRAG</text><text x="710" y="440" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">RADIATION · THERMAL · MICROGRAVITY</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s8">
+<div class="section-kicker">SUBJECT 03 · 08</div>
+<h2>The Four Forces of Flight</h2>
+<div class="study-matter"><p>The classical four-force model describes the major forces acting on a conventional aircraft in flight: lift, weight, thrust and drag. Lift is the aerodynamic force generally acting perpendicular to the relative airflow; weight acts toward the centre of gravity and ultimately toward Earth; thrust is produced by the propulsion system; and drag opposes motion through the air.</p><p>The four forces are not always equal. In steady, level, unaccelerated flight, lift approximately balances weight and thrust approximately balances drag. This does not mean that the aircraft is permanently locked into those values. During acceleration, climb, descent and turning, the magnitude and direction of the forces change.</p><p>For example, during a climb the propulsion system may provide additional energy while the aircraft&#x27;s trajectory converts some kinetic energy into gravitational potential energy. During a descent, gravitational potential energy can be converted into airspeed. During a turn, the aircraft must generate an aerodynamic force with a horizontal component to provide the required centripetal acceleration.</p><p>The four-force model is therefore a simplified way of visualising aircraft energy and motion. It is not a complete aircraft dynamics model because real aircraft also experience moments, side forces and numerous secondary aerodynamic effects.</p><p>For safety engineering, the model is valuable because many hazardous conditions can be interpreted as an imbalance or loss of one of the fundamental capabilities: inadequate lift, excessive drag, insufficient thrust or excessive weight/load. It provides a simple physical framework for understanding more complex failures.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Gliders">
+<title>Gliders</title><desc>Unpowered flight using aerodynamic lift and atmospheric energy</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Gliders</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Unpowered flight using aerodynamic lift and atmospheric energy</text>
+<g transform="translate(70 150)">
+<path d="M90 340Q360 250 900 300" fill="none" stroke="#d8dfe4" stroke-width="7"/>
+<path d="M430 285L120 95L455 260L700 100L530 305" fill="#121a22" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M430 285L390 440M530 305L600 420" stroke="#d8dfe4" stroke-width="4"/>
+<path d="M120 95L45 55M700 100L790 55" stroke="#7ce7ff" stroke-width="3" marker-end="url(#cyan)"/></g><text x="100" y="500" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">LONG HIGH-ASPECT-RATIO WING</text><text x="720" y="45" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">AERODYNAMIC LIFT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s9">
+<div class="section-kicker">SUBJECT 03 · 09</div>
+<h2>Lift: Fundamental Concept</h2>
+<div class="study-matter"><p>Lift is the aerodynamic force produced when a body moves through a fluid and is oriented so that the resulting pressure and momentum changes produce a force component perpendicular to the relative airflow. For an aircraft wing, lift is generated by the interaction between wing geometry, angle of attack, airspeed, air density and the surrounding flow field.</p><p>A commonly used engineering relationship is L = 1/2 ρV²SCL, where L is lift, ρ is air density, V is true airspeed, S is reference wing area and CL is the lift coefficient. The equation shows that lift is influenced by both flight conditions and aircraft configuration.</p><p>Angle of attack is particularly important. As angle of attack increases within the normal operating range, lift generally increases. Beyond a critical angle, the airflow can separate substantially from the upper surface and lift can decrease rapidly. This condition is associated with aerodynamic stall.</p><p>Lift is not simply a matter of air “pushing upward.” The wing creates a pressure distribution and changes the momentum of the airflow. The resulting aerodynamic force can be analysed using both pressure and momentum principles.</p><p>The safety significance is substantial. Insufficient lift can result from low airspeed, excessive angle of attack, high aircraft weight, low density or configuration problems. Understanding the mechanism is necessary before hazards such as stall, icing, contamination or high-altitude performance limitations can be analysed.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Balloons">
+<title>Balloons</title><desc>Buoyancy supports the vehicle instead of aerodynamic wing lift</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Balloons</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Buoyancy supports the vehicle instead of aerodynamic wing lift</text>
+<g transform="translate(100 135)">
+<path d="M250 160C215 235 235 370 370 425C505 370 525 235 490 160C445 75 295 75 250 160Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M265 165Q370 215 475 165M245 245Q370 295 495 245M240 320Q370 365 500 320" fill="none" stroke="#596673"/>
+<path d="M310 420L330 505M430 420L410 505M320 505H420L410 555H330Z" fill="#121a22" stroke="#ffb24a" stroke-width="3"/>
+<path d="M370 70V25" stroke="#7ce7ff" stroke-width="3" marker-end="url(#cyan)"/></g><text x="530" y="210" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ENVELOPE</text><text x="430" y="385" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">RIGGING</text><text x="335" y="595" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">BASKET</text><text x="590" y="75" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">BUOYANT FORCE</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s10">
+<div class="section-kicker">SUBJECT 03 · 10</div>
+<h2>Drag: Fundamental Concept</h2>
+<div class="study-matter"><p>Drag is the component of aerodynamic force that acts opposite to the vehicle&#x27;s direction of motion through the surrounding fluid. It is not a single phenomenon. Aerodynamic drag includes several components, with parasitic drag and induced drag being particularly important for conventional aircraft.</p><p>Parasitic drag arises from the aircraft moving through the air and includes form drag, skin-friction drag and interference effects. It generally increases strongly with airspeed. Induced drag is associated with the generation of lift and is particularly significant at low speeds and high lift coefficients. At high Mach numbers, compressibility and shock waves can introduce additional wave drag.</p><p>The total drag of an aircraft therefore changes with flight condition. There is typically a speed region where total drag is relatively low and another region where high-speed drag begins to rise sharply. Aircraft performance calculations use this behaviour to determine efficient climb, cruise and range conditions.</p><p>Propulsion must overcome drag to maintain steady flight. If available thrust falls below the drag required at a particular condition, the aircraft cannot maintain that condition without changing speed, altitude or configuration.</p><p>From a safety perspective, drag becomes important during engine-out flight, icing, landing configuration, emergency descents and high-speed operation. A change in drag can alter glide performance, fuel consumption and the amount of thrust required to maintain control.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="The Earth&#x27;s Atmosphere">
+<title>The Earth&#x27;s Atmosphere</title><desc>The atmosphere changes continuously with altitude.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">The Earth&#x27;s Atmosphere</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">The atmosphere changes continuously with altitude.</text>
+<g transform="translate(160 150)">
+<path d="M100 420Q300 300 500 420T900 300" fill="none" stroke="#7ce7ff" stroke-width="4"/>
+<rect x="100" y="80" width="800" height="340" fill="none" stroke="#39444f"/>
+<path d="M100 150H900M100 225H900M100 300H900M100 375H900" stroke="#26343f" stroke-width="2"/>
+<path d="M170 395L260 330L350 275L440 220L530 180L620 145L710 120" fill="none" stroke="#ffb24a" stroke-width="4"/>
+</g><text x="180" y="115" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">THERMOSPHERE</text><text x="180" y="190" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">MESOSPHERE</text><text x="180" y="265" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">STRATOSPHERE</text><text x="180" y="340" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TROPOSPHERE</text><text x="750" y="110" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">DENSITY FALLS WITH ALTITUDE</text><text x="750" y="500" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">ATMOSPHERIC PROFILE</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s11">
+<div class="section-kicker">SUBJECT 03 · 11</div>
+<h2>Thrust and Propulsion</h2>
+<div class="study-matter"><p>Thrust is the force generated by an aircraft propulsion system to accelerate the aircraft or to counter aerodynamic drag. Propulsion systems achieve this by exchanging momentum with a surrounding fluid or by accelerating exhaust products. Common aircraft propulsion systems include piston-propeller combinations, turboprops, turbojets, turbofans and electric propulsion systems.</p><p>A propulsion system contains more than its visible engine. It may include air intakes, compressors, combustion systems, turbines, exhaust systems, gearboxes, propellers, fuel systems, control systems and supporting electrical or hydraulic equipment. The performance of the complete propulsion system determines how much useful thrust or shaft power is available.</p><p>Jet engines operate by ingesting air, compressing it, adding energy through combustion or another process, and accelerating the resulting flow. Propellers produce thrust by accelerating a larger mass of air by a smaller velocity increment. These mechanisms lead to different efficiency and operating characteristics.</p><p>Thrust is not constant. It varies with altitude, temperature, airspeed, engine condition and power setting. A high-altitude aircraft may have less available thrust than it has at sea level. Engine degradation, inlet distortion, icing or fuel problems can also reduce performance.</p><p>Safety therefore depends on understanding both thrust production and the barriers against propulsion failures. Engine redundancy, fuel management, monitoring, maintenance, fire protection and emergency procedures all depend on the physical behaviour of the propulsion system.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Airships">
+<title>Airships</title><desc>Steerable lighter-than-air vehicles with propulsion and control surfaces</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Airships</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Steerable lighter-than-air vehicles with propulsion and control surfaces</text>
+<g transform="translate(70 170)">
+<path d="M80 250C150 100 430 70 720 120C920 155 1040 230 1080 250C1040 270 920 345 720 380C430 430 150 400 80 250Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="4"/>
+<path d="M260 365L320 435H510L570 365" fill="#121a22" stroke="#ffb24a" stroke-width="3"/>
+<path d="M430 365V435" stroke="#ffb24a" stroke-width="3"/>
+<path d="M170 250H30M1010 250H1160" stroke="#ff5a1f" stroke-width="5" marker-end="url(#arr)"/>
+<circle cx="760" cy="330" r="35" fill="#121a22" stroke="#7ce7ff" stroke-width="3"/></g><text x="380" y="465" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">GONDOLA / PAYLOAD</text><text x="900" y="205" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">PROPULSION</text><text x="700" y="430" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">CONTROL SURFACES</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s12">
+<div class="section-kicker">SUBJECT 03 · 12</div>
+<h2>Aircraft Weight and Mass</h2>
+<div class="study-matter"><p>Aircraft mass is the amount of matter contained in the aircraft, including structure, occupants, fuel, equipment and payload. Weight is the gravitational force acting on that mass. The distinction is important because aircraft performance calculations use mass and weight in different ways.</p><p>An aircraft&#x27;s operating mass changes throughout a flight. Fuel is consumed continuously, reducing mass and therefore weight. Payload configuration can change the centre of gravity and the total operating weight. Equipment additions or modifications can also alter mass properties.</p><p>Maximum take-off mass or weight is established from structural, aerodynamic, runway, propulsion and performance considerations. Exceeding approved limits can increase take-off distance, reduce climb performance, increase structural loads and alter stall characteristics.</p><p>Weight also affects landing performance. A heavier aircraft generally requires greater lift and therefore higher speeds or a different configuration for the same aerodynamic condition. The additional kinetic energy associated with a higher landing mass can increase braking and stopping requirements.</p><p>From a safety perspective, accurate weight control is essential. Incorrect loading data, fuel quantity errors, cargo misdistribution and inaccurate assumptions about passenger or equipment mass can produce a vehicle condition different from that assumed during performance calculations. Weight control is therefore both a technical and operational safety function.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Atmospheric Pressure, Density and Temperature">
+<title>Atmospheric Pressure, Density and Temperature</title><desc>Pressure, density and temperature influence lift, drag, propulsion and human survival.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Atmospheric Pressure, Density and Temperature</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Pressure, density and temperature influence lift, drag, propulsion and human survival.</text>
+<g transform="translate(90 175)">
+<path d="M80 330V80M80 330H360" stroke="#68737d" stroke-width="3"/>
+<path d="M80 110Q170 140 350 315" fill="none" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M80 150Q170 170 350 300" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<path d="M80 300Q200 230 350 150" fill="none" stroke="#ff6f70" stroke-width="5"/>
+<path d="M510 100V400" stroke="#39444f" stroke-width="2"/>
+<circle cx="700" cy="250" r="110" fill="#111922" stroke="#d8dfe4" stroke-width="3"/><path d="M590 250H810M700 140V360" stroke="#39444f"/><path d="M700 250L780 195" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/></g>
+<text x="90" y="65" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">RELATIVE VALUE</text><text x="410" y="115" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">PRESSURE</text><text x="410" y="170" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">DENSITY</text><text x="410" y="225" text-anchor="start" fill="#ff6f70" font-family="monospace" font-size="14">TEMPERATURE</text><text x="610" y="410" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">AIR PROPERTIES CHANGE WITH ALTITUDE</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s13">
+<div class="section-kicker">SUBJECT 03 · 13</div>
+<h2>Balance and Centre of Gravity</h2>
+<div class="study-matter"><p>The centre of gravity, or CG, is the point through which the resultant weight of an aircraft can be considered to act. Its position depends on the distribution of mass throughout the vehicle. Fuel, passengers, cargo, equipment and structural modifications can all change the CG location.</p><p>Aircraft are designed with an approved centre-of-gravity envelope. If the CG moves too far forward, the aircraft may require excessive control force or stabilising authority and can experience degraded take-off, landing or trim performance. If it moves too far aft, longitudinal stability and recovery characteristics can deteriorate.</p><p>The CG also affects the amount of lift or tail force required to maintain equilibrium. The aircraft is not simply a rigid object with one force acting on it; aerodynamic forces act at different locations and create moments. Safe flight requires the moments about the CG to be appropriately balanced.</p><p>Loading procedures therefore form part of the aircraft&#x27;s safety system. Cargo must be placed in approved compartments and passengers may need to be distributed according to the loading plan. Fuel transfer can also change CG during flight.</p><p>Understanding CG is especially important because an aircraft can have fully functioning engines, controls and structure and still become unsafe if its mass distribution is outside the approved envelope.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Gravity and Weight">
+<title>Gravity and Weight</title><desc>Gravity produces weight and governs trajectories, launch and orbit.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Gravity and Weight</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Gravity produces weight and governs trajectories, launch and orbit.</text>
+<g transform="translate(100 160)">
+<circle cx="350" cy="280" r="125" fill="#101820" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M350 155V405" stroke="#39444f"/><path d="M350 280L410 390" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<rect x="640" y="175" width="110" height="110" rx="12" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M695 285V410" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<path d="M640 230H510" stroke="#7ce7ff" stroke-width="3" marker-end="url(#c)"/></g>
+<text x="420" y="405" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">GRAVITY</text><text x="615" y="455" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">WEIGHT = MASS × GRAVITATIONAL ACCELERATION</text><text x="500" y="200" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">CENTRE OF EARTH</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s14">
+<div class="section-kicker">SUBJECT 03 · 14</div>
+<h2>Stability and Control</h2>
+<div class="study-matter"><p>Stability describes how an aircraft responds to disturbances, while control refers to the ability of the pilot or automatic system to deliberately change the aircraft&#x27;s attitude and flight path. The two concepts are related but not identical. A stable aircraft tends to resist or recover from disturbances; a controllable aircraft can respond to commanded inputs.</p><p>Aircraft motion is commonly described using three rotational axes: longitudinal roll, lateral pitch and vertical yaw. Ailerons primarily influence roll, elevators or stabilators influence pitch, and rudders influence yaw, although real aircraft use coupled aerodynamic and control effects.</p><p>Stability can be considered longitudinal, lateral and directional. The location of the centre of gravity, wing geometry, tail configuration and aerodynamic characteristics all influence stability. Modern aircraft may deliberately use relaxed natural stability and rely heavily on flight-control computers.</p><p>Control authority is not unlimited. At very low airspeed, aerodynamic control surfaces may become less effective. At high speed, structural and aerodynamic limitations may restrict manoeuvring. A flight-control system can also suffer from sensor, actuator, power, software or communication failures.</p><p>Safety analysis therefore considers both inherent vehicle stability and the availability of control authority after failures. Redundancy, control-law design, mechanical backup, actuator architecture and pilot interfaces are all developed around this fundamental relationship.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Unmanned Aerial Vehicles">
+<title>Unmanned Aerial Vehicles</title><desc>Aircraft controlled without an onboard pilot</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Unmanned Aerial Vehicles</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Aircraft controlled without an onboard pilot</text>
+<g transform="translate(120 150)">
+<path d="M360 290L500 250L640 290L500 330Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M500 290L250 155M500 290L750 155M500 290L250 425M500 290L750 425" stroke="#d8dfe4" stroke-width="4"/>
+<circle cx="250" cy="155" r="30" fill="#121a22" stroke="#ffb24a" stroke-width="3"/><circle cx="750" cy="155" r="30" fill="#121a22" stroke="#ffb24a" stroke-width="3"/><circle cx="250" cy="425" r="30" fill="#121a22" stroke="#ffb24a" stroke-width="3"/><circle cx="750" cy="425" r="30" fill="#121a22" stroke="#ffb24a" stroke-width="3"/>
+<path d="M500 250V170" stroke="#7ce7ff" stroke-width="4"/></g><text x="420" y="110" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">PAYLOAD / SENSOR</text><text x="825" y="150" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">REMOTE / AUTONOMOUS CONTROL</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s15">
+<div class="section-kicker">SUBJECT 03 · 15</div>
+<h2>Aircraft Flight Envelope</h2>
+<div class="study-matter"><p>The flight envelope is the range of speed, altitude, load factor, configuration and other conditions within which an aircraft is designed and approved to operate. It represents the boundaries imposed by aerodynamic, structural, propulsion and controllability limitations.</p><p>One important boundary is the low-speed limit. As airspeed decreases, an aircraft may need to increase angle of attack to maintain lift. Eventually the critical angle of attack can be exceeded and the wing may stall. At the high-speed end, compressibility, shock waves, structural loads and flutter can impose restrictions.</p><p>Load factor is another major consideration. Manoeuvring or turbulence can produce forces several times the aircraft&#x27;s static weight. The structural design must withstand specified combinations of speed and load factor. Operating outside those limits can produce permanent deformation or structural failure.</p><p>Altitude also changes the envelope. Engine thrust, aerodynamic performance, pressurisation requirements and available oxygen all vary with altitude. Certain aircraft have a maximum operating altitude beyond which performance or structural margins become inadequate.</p><p>The flight envelope is therefore a safety boundary, not merely a performance chart. Flight crew procedures, warning systems, automatic protections and certification requirements are designed to keep the aircraft away from conditions in which its structural or aerodynamic margins could be lost.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="General Aviation Aircraft">
+<title>General Aviation Aircraft</title><desc>Training, private, recreational and utility operations</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">General Aviation Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Training, private, recreational and utility operations</text>
+<g transform="translate(80 170)">
+<path d="M60 330Q300 260 690 285L900 325L690 360Q300 375 60 340Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M380 290L190 160L420 270L570 160L500 305" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M250 315L300 390M650 330L700 400" stroke="#d8dfe4" stroke-width="4"/>
+<circle cx="125" cy="330" r="48" fill="none" stroke="#ffb24a" stroke-width="4"/></g><text x="115" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TRAINING</text><text x="385" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PRIVATE</text><text x="650" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">UTILITY</text><text x="900" y="250" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">PROPULSION</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s16">
+<div class="section-kicker">SUBJECT 03 · 16</div>
+<h2>Speed, Mach Number and Altitude</h2>
+<div class="study-matter"><p>Aerospace vehicles operate over a wide range of speeds and altitudes, and the meaning of speed changes with the surrounding environment. Airspeed can be represented in several ways because pilots and engineers need different information about the aircraft&#x27;s aerodynamic condition, energy state and position.</p><p>Mach number is the ratio of an object&#x27;s speed to the local speed of sound. Because the speed of sound changes primarily with temperature, the same true airspeed can correspond to different Mach numbers under different atmospheric conditions. At sufficiently high Mach numbers, compressibility effects become important.</p><p>Altitude also affects aircraft performance. As altitude increases, atmospheric density generally decreases. This can reduce aerodynamic force for a given true airspeed and change engine performance. Aircraft may therefore use higher true airspeeds at altitude while maintaining a particular indicated aerodynamic condition.</p><p>The interaction between speed and altitude defines important operational limits. High-speed flight can produce structural and thermal problems, while low-speed flight can approach stall margins. High altitude can improve cruise efficiency but may reduce available thrust and leave smaller margins between operating conditions and physiological or aerodynamic limits.</p><p>Understanding speed, Mach number and altitude is therefore essential to performance planning, navigation, structural protection and safe operation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="The Four Forces of Flight">
+<title>The Four Forces of Flight</title><desc>Aircraft motion is shaped by lift, weight, thrust and drag.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">The Four Forces of Flight</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Aircraft motion is shaped by lift, weight, thrust and drag.</text>
+<g transform="translate(110 170)">
+<path d="M280 300Q450 245 680 295L810 325L680 350Q450 375 280 320Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M470 285L300 170L500 270L650 170L550 300" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M480 270V90" stroke="#7ce7ff" stroke-width="6" marker-end="url(#c)"/>
+<path d="M480 350V535" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M275 315H80" stroke="#ff5a1f" stroke-width="6" marker-end="url(#a)"/>
+<path d="M815 315H1010" stroke="#d4a1ff" stroke-width="6" marker-end="url(#a)"/></g>
+<text x="505" y="80" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="18">LIFT</text><text x="505" y="575" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="18">WEIGHT</text><text x="65" y="305" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="18">THRUST</text><text x="1015" y="305" text-anchor="start" fill="#d4a1ff" font-family="monospace" font-size="18">DRAG</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s17">
+<div class="section-kicker">SUBJECT 03 · 17</div>
+<h2>Climb, Cruise and Descent</h2>
+<div class="study-matter"><p>A flight profile is a controlled sequence in which the aircraft manages altitude, airspeed, energy and configuration. The broad phases of climb, cruise and descent illustrate how the balance between aerodynamic forces, propulsion and gravity changes during normal operation.</p><p>During climb, the aircraft gains gravitational potential energy. Some of the propulsion system&#x27;s available energy is therefore used to overcome the component of weight associated with the flight path, while the aircraft must still overcome aerodynamic drag. Climb performance depends on aircraft weight, altitude, temperature, engine output and configuration.</p><p>Cruise is generally selected to provide efficient progress over the route. The aircraft may operate at a nearly constant altitude and speed, with thrust approximately balancing drag. Small changes in weight and atmospheric conditions require continual adjustments.</p><p>During descent, gravitational potential energy is converted into kinetic energy and aerodynamic dissipation. The aircraft can descend with relatively low engine power while controlling airspeed through pitch, configuration and drag devices. An emergency descent may use a substantially different profile because the priority may be reaching a lower breathable altitude rapidly.</p><p>These phases demonstrate why aerospace safety is an energy-management problem as well as a control problem. A safe flight requires sufficient margins for speed, altitude, fuel, thrust and controllability throughout the transition between phases.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Lift: Fundamental Concept">
+<title>Lift: Fundamental Concept</title><desc>A wing redirects airflow and develops a pressure and momentum difference.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Lift: Fundamental Concept</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">A wing redirects airflow and develops a pressure and momentum difference.</text>
+<g transform="translate(100 180)">
+<path d="M100 300Q300 220 700 270Q800 285 900 330Q800 350 700 350Q300 365 100 330Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M100 210Q350 110 650 175T930 220" fill="none" stroke="#7ce7ff" stroke-width="4" marker-end="url(#c)"/>
+<path d="M100 390Q350 480 650 420T930 370" fill="none" stroke="#7ce7ff" stroke-width="4" marker-end="url(#c)"/>
+<path d="M500 275V100" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/></g>
+<text x="120" y="175" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">UPPER FLOW</text><text x="120" y="500" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">LOWER FLOW</text><text x="520" y="90" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">RESULTANT AERODYNAMIC FORCE</text><text x="800" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ANGLE OF ATTACK</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s18">
+<div class="section-kicker">SUBJECT 03 · 18</div>
+<h2>Approaching the Edge of the Atmosphere</h2>
+<div class="study-matter"><p>As an aircraft climbs to increasingly high altitude, the atmosphere becomes progressively thinner. Aerodynamic forces decrease, engine performance changes and the assumptions used for conventional aircraft operation become less effective. At sufficiently high altitude, orbital mechanics begin to become more important than ordinary aerodynamic flight.</p><p>The transition is gradual rather than a sharp boundary. There is no single physical altitude at which “the atmosphere ends.” Even at hundreds of kilometres above Earth, a very thin atmosphere remains. However, density becomes low enough that conventional aerodynamic lift and drag are extremely small for many spacecraft.</p><p>For a conventional aircraft, declining density means that a higher true airspeed may be required to produce the same lift. Propulsion systems also face reduced air mass flow. At the same time, human physiological constraints become severe because pressure and oxygen availability fall.</p><p>Launch vehicles exploit this changing environment deliberately. They begin in dense atmosphere, where aerodynamic drag and heating are significant, and progressively transition to a regime in which most of the vehicle&#x27;s performance is governed by gravitational and orbital mechanics.</p><p>Understanding this transition helps explain why aerospace vehicles are designed differently for aircraft flight, high-altitude operation, launch and spaceflight.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Transport Aircraft">
+<title>Transport Aircraft</title><desc>Large passenger and cargo aircraft with distributed systems</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Transport Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Large passenger and cargo aircraft with distributed systems</text>
+<g transform="translate(70 155)">
+<path d="M60 330Q300 250 790 280L1040 330L790 365Q300 385 60 340Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M380 290L150 115L430 270L650 120L520 310" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M300 305L270 180M560 320L530 195" stroke="#d8dfe4" stroke-width="5"/>
+<circle cx="330" cy="310" r="35" fill="none" stroke="#ffb24a" stroke-width="4"/><circle cx="570" cy="325" r="35" fill="none" stroke="#ffb24a" stroke-width="4"/>
+<path d="M1030 330H1140" stroke="#ff5a1f" stroke-width="6" marker-end="url(#arr)"/></g><text x="170" y="90" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PASSENGER / CARGO</text><text x="245" y="430" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ENGINE 1</text><text x="500" y="450" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ENGINE 2</text><text x="975" y="300" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">THRUST</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s19">
+<div class="section-kicker">SUBJECT 03 · 19</div>
+<h2>The Space Environment</h2>
+<div class="study-matter"><p>The space environment differs profoundly from the terrestrial environment. A spacecraft may experience vacuum, radiation, extreme thermal cycling, atomic oxygen in low Earth orbit, micrometeoroids, orbital debris and long periods without physical access for maintenance.</p><p>Vacuum eliminates normal atmospheric pressure and greatly reduces convective heat transfer. Materials and lubricants selected for terrestrial equipment may behave differently under vacuum. Trapped gases can outgas, seals can lose function and some mechanisms require specialised materials or lubrication.</p><p>Radiation can affect both humans and electronics. High-energy particles may produce cumulative dose, single-event effects or degradation of semiconductor devices. Spacecraft therefore use shielding, component selection, fault tolerance and operational strategies to manage radiation risk.</p><p>Thermal conditions can also be severe. A surface exposed directly to sunlight may become much hotter than a surface facing deep space. Because heat transfer is dominated by radiation, spacecraft thermal control depends on coatings, insulation, radiators, heat pipes and controlled orientation.</p><p>Micrometeoroids and debris create impact hazards. Even small objects can possess substantial kinetic energy at orbital velocity. Protection can involve shielding, tracking, avoidance manoeuvres and structural redundancy.</p><p>These environmental factors form the baseline against which spacecraft systems must be designed and maintained.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Drag: Fundamental Concept">
+<title>Drag: Fundamental Concept</title><desc>Drag opposes motion through the atmosphere.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Drag: Fundamental Concept</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Drag opposes motion through the atmosphere.</text>
+<g transform="translate(100 175)">
+<path d="M250 320Q430 245 690 285L850 320L690 350Q430 375 250 330Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M850 320H1050" stroke="#ff5a1f" stroke-width="8" marker-end="url(#a)"/>
+<path d="M80 220H230M60 280H220M80 340H230M110 400H250" stroke="#7ce7ff" stroke-width="4" marker-end="url(#c)"/>
+<path d="M430 280L370 150L470 255L600 155L520 295" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/></g>
+<text x="80" y="455" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">AIRFLOW</text><text x="870" y="300" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="18">DRAG</text><text x="450" y="455" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PARASITIC + INDUCED + WAVE DRAG</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s20">
+<div class="section-kicker">SUBJECT 03 · 20</div>
+<h2>Vacuum and Microgravity</h2>
+<div class="study-matter"><p>Vacuum means that the surrounding pressure is extremely low compared with Earth&#x27;s atmosphere. It changes how heat transfer, fluid behaviour, combustion, materials and human physiology operate. In crewed spacecraft, maintaining an internal pressure environment is therefore a primary life-safety requirement.</p><p>In vacuum, conventional combustion cannot continue without a supplied oxidiser. External convective cooling is also essentially unavailable. Liquids behave differently because surface tension becomes dominant and gas-liquid separation becomes more difficult. Materials may release trapped gases through outgassing.</p><p>Microgravity is commonly experienced by spacecraft in orbit because the vehicle and its occupants are in continuous free fall. The term does not mean that gravity has disappeared. Earth’s gravity remains substantial in low orbit; the apparent weightlessness results from the shared free-fall motion.</p><p>Microgravity changes how people move, how fluids distribute, how dust behaves and how mechanical systems are lubricated and operated. Long-duration human exposure can also produce physiological effects that require exercise, medical monitoring and life-support strategies.</p><p>These conditions demonstrate why spacecraft cannot simply be treated as aircraft without wings. Their systems must be designed around a vacuum environment and prolonged free-fall conditions.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Military Aircraft">
+<title>Military Aircraft</title><desc>Mission-driven aircraft for combat, surveillance, transport and support</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Military Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Mission-driven aircraft for combat, surveillance, transport and support</text>
+<g transform="translate(80 155)">
+<path d="M90 330L420 250L930 300L1060 330L930 360L420 380Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M450 255L190 95L470 245L700 110L555 285" fill="#121a22" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M720 305L900 205L820 325" fill="#121a22" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M380 380L300 455M590 390L520 460" stroke="#ffb24a" stroke-width="4"/>
+<circle cx="250" cy="315" r="12" fill="#ff6f70"/></g><text x="115" y="470" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">MISSION SYSTEMS</text><text x="800" y="195" text-anchor="start" fill="#ff6f70" font-family="monospace" font-size="14">SENSORS / WEAPONS / SUPPORT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s21">
+<div class="section-kicker">SUBJECT 03 · 21</div>
+<h2>Orbital Motion</h2>
+<div class="study-matter"><p>An orbit is a trajectory produced when an object moves under gravitational influence with sufficient tangential velocity that it continually falls toward a central body without striking it. A spacecraft in orbit is therefore not escaping gravity; it is continuously responding to gravity.</p><p>Imagine launching a vehicle horizontally from high above Earth. If its horizontal velocity is low, it falls back toward the surface. If velocity is increased, the trajectory extends farther before returning. At an appropriate velocity and altitude, the curvature of the trajectory matches the curvature of Earth closely enough to produce an orbit.</p><p>In a circular orbit, gravitational acceleration provides the required centripetal acceleration. The spacecraft continuously changes direction even though its speed may remain approximately constant. In an elliptical orbit, speed changes along the orbit: the spacecraft moves faster near the point closest to Earth and slower farther away.</p><p>Propulsive manoeuvres alter orbital energy and momentum. A relatively small change in velocity, known as delta-v, can change altitude, orbital period, inclination or encounter geometry.</p><p>Orbital mechanics is fundamental to spacecraft safety because incorrect velocity, attitude or timing can result in missed rendezvous, undesirable trajectories, collision risk or loss of mission capability.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Supersonic Aircraft">
+<title>Supersonic Aircraft</title><desc>Mach 1+ flight introduces shocks and compressibility</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Supersonic Aircraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Mach 1+ flight introduces shocks and compressibility</text>
+<g transform="translate(70 170)">
+<path d="M70 330L400 250L950 320L1040 345L950 370L400 385Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M420 255L190 110L450 245L680 115L530 285" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M700 315L900 230L830 335" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M900 210L1040 100M850 260L1080 180M850 340L1080 430" stroke="#ffb24a" stroke-width="3"/></g><text x="880" y="85" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">SHOCK WAVES</text><text x="120" y="440" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">MACH &gt; 1</text><text x="690" y="450" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">COMPRESSIBILITY / HEATING</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s22">
+<div class="section-kicker">SUBJECT 03 · 22</div>
+<h2>Orbit, Altitude and Velocity</h2>
+<div class="study-matter"><p>Orbital altitude and velocity are closely related through gravitational mechanics. For an ideal circular orbit around a spherical body, orbital velocity depends primarily on the gravitational parameter of the central body and the orbital radius. The simplified relationship is v = √(μ/r), where μ is the standard gravitational parameter and r is the distance from the centre of the body.</p><p>This relationship shows that a spacecraft in a higher circular orbit generally requires a lower orbital velocity than one in a lower circular orbit. However, reaching the higher orbit requires an appropriate change in orbital energy, and orbital period becomes longer as orbital radius increases.</p><p>Orbital velocity is not the same as a spacecraft&#x27;s speed relative to the ground. A spacecraft&#x27;s velocity is a vector with both magnitude and direction, while its ground track depends on Earth&#x27;s rotation, orbit inclination and observation geometry.</p><p>Changing velocity at a particular point in an orbit changes the future trajectory. A short propulsion event can raise one side of an orbit, lower another side, change inclination or establish an intercept trajectory.</p><p>For safety engineering, the important point is that spacecraft position cannot be managed independently of velocity and time. Navigation errors, propulsion errors and timing errors can accumulate into significant trajectory deviations.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Thrust and Propulsion">
+<title>Thrust and Propulsion</title><desc>Propulsion supplies the force needed to accelerate or sustain flight.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Thrust and Propulsion</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Propulsion supplies the force needed to accelerate or sustain flight.</text>
+<g transform="translate(100 165)">
+<path d="M280 315Q450 255 680 290L800 325L680 355Q450 375 280 330Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<circle cx="270" cy="325" r="65" fill="#111922" stroke="#ffb24a" stroke-width="4"/>
+<path d="M270 260V390M205 325H335M225 280L315 370M315 280L225 370" stroke="#ffb24a" stroke-width="2"/>
+<path d="M210 325H70" stroke="#ff5a1f" stroke-width="7" marker-end="url(#a)"/>
+<path d="M800 325H1060" stroke="#7ce7ff" stroke-width="7" marker-end="url(#c)"/></g>
+<text x="75" y="285" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">INLET / AIR</text><text x="850" y="285" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">THRUST</text><text x="180" y="455" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PROPULSION CONVERTS ENERGY INTO USEFUL FORCE</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s23">
+<div class="section-kicker">SUBJECT 03 · 23</div>
+<h2>Launch and Ascent</h2>
+<div class="study-matter"><p>Launch is the process of accelerating a vehicle from the Earth&#x27;s surface or another starting point into a trajectory that provides the required orbital or escape energy. It is one of the most demanding phases of aerospace operation because the vehicle passes rapidly through changing aerodynamic, thermal, structural and propulsion environments.</p><p>A launch vehicle must generate thrust greater than the effective opposing forces while maintaining a controlled trajectory. Near the surface, atmospheric drag is significant and aerodynamic loads can become severe. As altitude increases, atmospheric density falls and the vehicle can accelerate more efficiently toward its required orbital velocity.</p><p>Multi-stage rockets divide the vehicle into sections that can be discarded after their propellant is consumed. This improves mass efficiency because the vehicle does not have to continue accelerating empty tanks and engines that are no longer required.</p><p>Guidance and control systems continuously compare the desired trajectory with the vehicle&#x27;s measured state. Engines or thrust-vectoring systems then make corrections. Structural loads, vibration, acoustic energy, thermal effects and propulsion transients all have to remain within design limits.</p><p>Launch safety therefore depends on propulsion reliability, structural integrity, guidance, range safety, telemetry, fault detection, abort strategies where applicable and rigorous pre-launch verification.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Weight and Mass">
+<title>Aircraft Weight and Mass</title><desc>Mass is an amount of matter; weight is the gravitational force acting on it.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Aircraft Weight and Mass</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Mass is an amount of matter; weight is the gravitational force acting on it.</text>
+<g transform="translate(110 165)">
+<path d="M100 400H450M160 400L270 175M390 400L270 175" stroke="#d8dfe4" stroke-width="4"/>
+<rect x="205" y="105" width="130" height="90" rx="12" fill="#151e27" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M270 195V360" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<path d="M600 150L900 150M600 250L900 250M600 350L900 350" stroke="#39444f" stroke-width="3"/>
+<circle cx="700" cy="150" r="9" fill="#7ce7ff"/><circle cx="780" cy="250" r="9" fill="#ffb24a"/><circle cx="860" cy="350" r="9" fill="#ff6f70"/></g>
+<text x="205" y="80" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">MASS</text><text x="305" y="370" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">WEIGHT</text><text x="610" y="115" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">FUEL BURN → MASS CHANGES</text><text x="610" y="215" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PAYLOAD → MASS CHANGES</text><text x="610" y="315" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">GRAVITY → WEIGHT CHANGES</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s24">
+<div class="section-kicker">SUBJECT 03 · 24</div>
+<h2>Re-entry and Atmospheric Heating</h2>
+<div class="study-matter"><p>Re-entry occurs when a spacecraft or other high-energy vehicle returns from space into an atmosphere. The vehicle&#x27;s orbital or trajectory energy is transformed through aerodynamic deceleration, producing intense heating and large mechanical loads.</p><p>The heating is not simply caused by friction in the everyday sense. As the vehicle moves at very high speed, the air ahead of it is compressed strongly and its temperature rises. Shock waves and high-temperature gas effects create severe thermal loads around the vehicle, especially at leading edges and other high-heating regions.</p><p>The vehicle must manage both deceleration and heat. A blunt re-entry shape can create a strong shock wave and spread heating over a larger area, while thermal protection systems prevent excessive heat from reaching the primary structure or crew compartment.</p><p>Attitude is critical. A small change in orientation can substantially alter aerodynamic forces and heating. Guidance systems therefore maintain a controlled trajectory through the atmosphere. The vehicle must also survive rapidly changing pressure, aerodynamic loads and possible communication interruptions.</p><p>Re-entry is a major aerospace safety challenge because the vehicle is transitioning from an environment in which aerodynamic forces are minimal to one in which those forces rapidly become dominant.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Hypersonic Vehicles">
+<title>Hypersonic Vehicles</title><desc>Extreme Mach numbers make aerothermal effects central</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Hypersonic Vehicles</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Extreme Mach numbers make aerothermal effects central</text>
+<g transform="translate(80 175)">
+<path d="M90 350L470 240L1000 310L1070 345L1000 380L470 390Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M470 245L230 105L500 235L700 125L570 280" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M700 270L1010 140M720 310L1060 260M720 355L1030 440" stroke="#ff5a1f" stroke-width="6"/>
+<path d="M800 230L1110 110" stroke="#ffb24a" stroke-width="2" stroke-dasharray="8 7"/></g><text x="800" y="100" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">SHOCK / HEAT LAYER</text><text x="95" y="440" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">HYPERSONIC FLOW</text><text x="750" y="470" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">AEROTHERMODYNAMICS</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s25">
+<div class="section-kicker">SUBJECT 03 · 25</div>
+<h2>Spacecraft Structure</h2>
+<div class="study-matter"><p>The spacecraft structure is the load-bearing framework that supports equipment, payloads, propulsion systems and, in crewed vehicles, the pressure vessel and occupants. It must survive launch loads, vibration, thermal cycling, deployment forces and the long-term space environment.</p><p>During launch, the structure can experience high acceleration, acoustic loads and vibration. Engines and turbopumps generate dynamic forces that are transmitted through the vehicle. Payloads and internal equipment have their own mass and natural frequencies, so structural design must prevent damaging resonance or excessive deformation.</p><p>A spacecraft structure may include primary load paths, secondary panels, equipment decks, pressure shells, trusses and attachment points. Materials are selected for strength, stiffness, mass efficiency, thermal behaviour, radiation resistance and compatibility with the space environment.</p><p>Structural margins are important because a spacecraft may be impossible to repair after launch. Designers therefore use analysis, qualification testing, inspection and manufacturing controls to establish confidence in the load-bearing system.</p><p>Structural failure can have cascading consequences. Loss of a pressure vessel can threaten a crew, while deformation can misalign sensors, jam mechanisms, damage wiring or prevent solar arrays from deploying. Structural integrity is therefore a system-level safety requirement.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Balance and Centre of Gravity">
+<title>Balance and Centre of Gravity</title><desc>Centre of gravity controls balance, trim and stability margins.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Balance and Centre of Gravity</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Centre of gravity controls balance, trim and stability margins.</text>
+<g transform="translate(80 180)">
+<path d="M80 320Q300 250 820 295L1000 325L820 360Q300 380 80 330Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M520 280V410" stroke="#ffb24a" stroke-width="5"/><circle cx="520" cy="280" r="14" fill="#ffb24a"/>
+<path d="M200 250V410M800 260V410" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M200 410H800" stroke="#39444f" stroke-width="3"/>
+<path d="M350 430H690" stroke="#ff6f70" stroke-width="4"/><path d="M350 430l30-12v24zM690 430l-30-12v24z" fill="#ff6f70"/></g>
+<text x="475" y="455" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">CENTRE OF GRAVITY</text><text x="120" y="490" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">FORWARD CG</text><text x="760" y="490" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">AFT CG</text><text x="370" y="515" text-anchor="start" fill="#ff6f70" font-family="monospace" font-size="14">ALLOWABLE CG ENVELOPE</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s26">
+<div class="section-kicker">SUBJECT 03 · 26</div>
+<h2>Spacecraft Propulsion</h2>
+<div class="study-matter"><p>Spacecraft propulsion provides controlled changes in velocity, known as delta-v, allowing a vehicle to modify its orbit or trajectory. Propulsion is therefore less about continuously producing lift and more about changing the spacecraft&#x27;s state at selected points in its mission.</p><p>Chemical propulsion systems generate high thrust by releasing stored chemical energy and accelerating exhaust. They are useful when large velocity changes must be achieved quickly, such as launch, major orbital manoeuvres or some landing operations. Electric propulsion systems produce much lower thrust but can achieve very high exhaust velocity and therefore excellent propellant efficiency over long operating periods.</p><p>Attitude-control propulsion may use small thrusters to rotate or stabilise the spacecraft. Reaction wheels and control moment gyros can perform some attitude-control functions without expelling propellant.</p><p>Propulsion systems introduce hazards including high-pressure fluids, energetic propellants, combustion instability, valve failure, leakage, contamination and unwanted thrust. Spacecraft may also become unsafe if an engine fires at the wrong time or in the wrong direction.</p><p>Propulsion safety therefore requires accurate command logic, isolation, fault detection, verification of firing conditions and robust guidance and navigation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Helicopters">
+<title>Helicopters</title><desc>Rotor aerodynamics, transmission, controls and tail rotor</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Helicopters</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Rotor aerodynamics, transmission, controls and tail rotor</text>
+<g transform="translate(80 150)">
+<path d="M300 310Q450 250 650 285L800 325L650 355Q450 370 300 330Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M520 285V135M270 135Q520 75 770 135" stroke="#d8dfe4" stroke-width="7" fill="none"/>
+<path d="M520 135L290 90M520 135L750 90" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M680 310L930 225M680 350L930 435" stroke="#d8dfe4" stroke-width="5"/>
+<circle cx="950" cy="225" r="35" fill="none" stroke="#ffb24a" stroke-width="4"/><path d="M950 190V260M915 225H985" stroke="#ffb24a" stroke-width="2"/></g><text x="400" y="70" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">MAIN ROTOR</text><text x="900" y="175" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">TAIL ROTOR</text><text x="400" y="430" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TRANSMISSION / CONTROL</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s27">
+<div class="section-kicker">SUBJECT 03 · 27</div>
+<h2>Power and Energy Systems</h2>
+<div class="study-matter"><p>Spacecraft require electrical energy to operate avionics, sensors, communications, propulsion controls, thermal systems and payloads. Unlike many terrestrial vehicles, a spacecraft may have limited opportunities to obtain or replace energy after launch.</p><p>Solar arrays are widely used to convert sunlight into electrical power. Batteries store energy for periods when sunlight is unavailable, such as orbital eclipse. Power-conditioning and distribution equipment regulates voltage and routes energy to the spacecraft&#x27;s various loads.</p><p>The electrical system must be designed around generation capacity, storage capacity and peak demand. A spacecraft can experience both power shortage and excess generation. Either condition can damage equipment or reduce mission capability.</p><p>Power systems also interact with thermal control because electrical equipment converts some input energy into heat. A failed power component can therefore produce secondary thermal or avionics problems.</p><p>Safety features may include redundant power paths, current limiting, circuit protection, fault isolation and carefully controlled load shedding. Understanding the power architecture is essential because the loss of electricity can disable multiple seemingly unrelated spacecraft functions simultaneously.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Stability and Control">
+<title>Stability and Control</title><desc>Stability describes how a vehicle responds after a disturbance.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Stability and Control</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Stability describes how a vehicle responds after a disturbance.</text>
+<g transform="translate(90 160)">
+<path d="M90 340Q300 260 500 300L760 340L500 370Q300 390 90 350Z" fill="url(#m)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M450 300Q600 170 760 260" fill="none" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<path d="M760 260Q610 350 450 300" fill="none" stroke="#8dffad" stroke-width="5" marker-end="url(#c)"/>
+<path d="M300 250V140M300 430V520" stroke="#7ce7ff" stroke-width="3" marker-end="url(#c)"/><path d="M450 300H900" stroke="#39444f" stroke-width="2"/></g>
+<text x="90" y="115" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">DISTURBANCE</text><text x="520" y="205" text-anchor="start" fill="#8dffad" font-family="monospace" font-size="14">RESTORING RESPONSE</text><text x="120" y="545" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">PITCH · ROLL · YAW</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s28">
+<div class="section-kicker">SUBJECT 03 · 28</div>
+<h2>Thermal Control</h2>
+<div class="study-matter"><p>Thermal control keeps aerospace systems within allowable temperature ranges. Temperature affects material strength, electronics, batteries, lubricants, sensors, propulsion systems and human survival. In spacecraft, thermal control is particularly challenging because there is almost no surrounding atmosphere to carry heat away by convection.</p><p>Spacecraft can receive solar radiation, planetary infrared radiation and heat generated internally by electrical and mechanical equipment. Heat must then be transported to suitable radiating surfaces and emitted into space.</p><p>Thermal-control methods include surface coatings, multilayer insulation, heat pipes, thermal straps, radiators, heaters and controlled spacecraft orientation. Some components may need active heating during cold conditions, while others need substantial heat rejection.</p><p>Aircraft have different thermal mechanisms because air can carry heat away and engines are surrounded by a moving fluid. High-speed aircraft also experience aerodynamic heating, while spacecraft experience long-duration radiative heating and cooling cycles.</p><p>Thermal failure can be gradual or sudden. Excessive temperature can degrade electronics, reduce battery life, distort structures or create fire hazards in crewed environments. Thermal design is therefore an essential safety barrier rather than simply a comfort feature.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="VTOL and eVTOL Vehicles">
+<title>VTOL and eVTOL Vehicles</title><desc>Distributed propulsion and vertical-to-horizontal transition</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">VTOL and eVTOL Vehicles</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Distributed propulsion and vertical-to-horizontal transition</text>
+<g transform="translate(80 165)">
+<path d="M100 330L470 265L850 300L1010 335L850 365L470 380Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M470 270L210 130L500 260L690 120L560 290" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<g fill="#121a22" stroke="#7ce7ff" stroke-width="3"><circle cx="220" cy="175" r="34"/><circle cx="420" cy="275" r="34"/><circle cx="650" cy="170" r="34"/><circle cx="830" cy="305" r="34"/></g>
+<path d="M220 210V95M420 310V190M650 205V90M830 340V225" stroke="#7ce7ff" stroke-width="3" marker-end="url(#cyan)"/></g><text x="140" y="470" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">DISTRIBUTED PROPULSION</text><text x="640" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">VERTICAL THRUST</text><text x="870" y="440" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TRANSITION</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s29">
+<div class="section-kicker">SUBJECT 03 · 29</div>
+<h2>Communication and Navigation</h2>
+<div class="study-matter"><p>Aerospace vehicles must know their state and, depending on mission architecture, must exchange information with other systems. Communication transfers commands, telemetry and mission data. Navigation determines position, velocity, attitude or trajectory relative to a reference frame.</p><p>Aircraft commonly use combinations of inertial systems, satellite navigation, radio navigation, air-data sensors and external surveillance. Spacecraft may use inertial sensors, star trackers, ground tracking, ranging, optical navigation and other specialised techniques.</p><p>Communication links can be affected by distance, antenna orientation, atmospheric conditions, interference, equipment failure and spacecraft attitude. Navigation errors can arise from sensor bias, drift, incorrect models or loss of reference signals.</p><p>The distinction between communication and navigation is important. A vehicle may lose communication with a ground station while continuing to navigate correctly, or it may retain communication while its navigation solution becomes unreliable.</p><p>Safety-critical aerospace systems therefore use redundancy, cross-checking, fault detection and carefully defined degraded modes. A loss of information can be hazardous, but an incorrect measurement can sometimes be more dangerous because the system may act confidently on false information.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Flight Envelope">
+<title>Aircraft Flight Envelope</title><desc>The flight envelope defines combinations of speed, altitude and loading within which operation is permitted.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Aircraft Flight Envelope</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">The flight envelope defines combinations of speed, altitude and loading within which operation is permitted.</text>
+<g transform="translate(90 160)">
+<path d="M80 400V80M80 400H1050" stroke="#68737d" stroke-width="3"/>
+<path d="M120 370Q230 180 390 130Q570 100 720 180Q860 270 980 350L900 390L300 390Z" fill="#121a22" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M120 370L300 390M720 180L900 390" stroke="#ff5a1f" stroke-width="4" stroke-dasharray="9 7"/>
+<circle cx="520" cy="235" r="12" fill="#8dffad"/></g>
+<text x="90" y="65" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ALTITUDE / LOAD / SPEED</text><text x="120" y="435" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">LOW-SPEED LIMIT</text><text x="825" y="435" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">HIGH-SPEED LIMIT</text><text x="465" y="215" text-anchor="start" fill="#8dffad" font-family="monospace" font-size="14">NORMAL OPERATING REGION</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s30">
+<div class="section-kicker">SUBJECT 03 · 30</div>
+<h2>Life-Support and Crew Systems</h2>
+<div class="study-matter"><p>Crewed aerospace vehicles must create an artificial environment that supports human life. The basic functions include maintaining breathable atmosphere, pressure, temperature, humidity and carbon-dioxide control while managing water, waste, food, fire risk and other consumables.</p><p>The cabin or habitat pressure must remain within an acceptable range. Oxygen concentration and partial pressure must support human metabolism without creating unnecessary fire risk. Carbon dioxide produced by occupants must be removed continuously. Trace contaminants may also require filtration.</p><p>Thermal control prevents both overheating and excessive cooling. Humidity must be managed because condensation can damage equipment and encourage biological growth. Water recovery and waste management become increasingly important during long-duration missions.</p><p>Crew systems also include restraints, seats, displays, emergency equipment, medical provisions and escape or abort systems where the vehicle architecture permits them.</p><p>The key safety principle is that human life depends on multiple coupled systems. A power failure can disable environmental control; loss of cooling can affect electronics; a pressure leak can create an immediate emergency. Crewed spacecraft therefore use monitoring, redundancy, isolation and emergency procedures to preserve survivable conditions.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Launch Vehicles">
+<title>Launch Vehicles</title><desc>Rockets generate thrust to overcome gravity and atmospheric drag</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Launch Vehicles</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Rockets generate thrust to overcome gravity and atmospheric drag</text>
+<g transform="translate(250 145)">
+<path d="M300 420Q220 330 250 160Q275 75 300 45Q325 75 350 160Q380 330 300 420Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M275 170H325M265 230H335M255 290H345" stroke="#39444f" stroke-width="4"/>
+<path d="M255 360L185 430L260 405M345 360L415 430L340 405" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M300 420V570" stroke="#ff5a1f" stroke-width="16" marker-end="url(#arr)"/>
+<path d="M210 530Q300 600 390 530" fill="none" stroke="#ffb24a" stroke-width="3"/></g><text x="560" y="180" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">STAGES</text><text x="555" y="430" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PROPELLANT / ENGINE</text><text x="565" y="570" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">THRUST</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s31">
+<div class="section-kicker">SUBJECT 03 · 31</div>
+<h2>Space Suits and Human Survival</h2>
+<div class="study-matter"><p>A spacesuit is effectively a small personal spacecraft. It must provide pressure, oxygen, carbon-dioxide removal, thermal regulation, communication and protection while allowing the wearer to move and perform useful work.</p><p>In vacuum, an unprotected human cannot survive because body fluids and tissues require a controlled pressure environment and the lungs cannot obtain oxygen from the surroundings. The suit therefore maintains a pressure environment around the body. Oxygen is supplied through a controlled system and carbon dioxide must be removed.</p><p>Mobility is a major engineering challenge. A pressurised suit resists movement, so joints, gloves and bearings must be designed to allow useful motion. Thermal control is also required because the suit may experience intense sunlight and deep-space cold while producing metabolic heat internally.</p><p>A portable life-support system can contain oxygen supplies, carbon-dioxide removal, cooling equipment, electrical power and communication equipment. The suit must also protect against small particles and other environmental hazards depending on the mission.</p><p>Spacesuit safety depends on pressure integrity, life-support capacity, thermal control, communications and procedures. A small leak or failure can become life-threatening quickly, so detection and contingency capability are essential.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Spacecraft">
+<title>Spacecraft</title><desc>Vehicles designed for sustained operation in space</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Spacecraft</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Vehicles designed for sustained operation in space</text>
+<g transform="translate(80 165)">
+<path d="M350 300Q470 170 650 250L770 315L650 370Q470 430 350 300Z" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M530 230L430 110L555 220M600 360L500 500L620 375" stroke="#d8dfe4" stroke-width="3"/>
+<rect x="760" y="230" width="220" height="150" fill="#111a22" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M790 265H950M790 300H950M790 335H950" stroke="#7ce7ff" stroke-width="2"/>
+<path d="M350 300L160 220M350 320L140 410" stroke="#ffb24a" stroke-width="5"/></g><text x="780" y="210" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">POWER / THERMAL CONTROL</text><text x="120" y="205" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">COMMUNICATION / ATTITUDE</text><text x="400" y="470" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">PRESSURE / AVIONICS / PROPULSION</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s32">
+<div class="section-kicker">SUBJECT 03 · 32</div>
+<h2>Crewed vs Uncrewed Vehicles</h2>
+<div class="study-matter"><p>The presence of humans fundamentally changes aerospace system requirements. An uncrewed vehicle may be lost with significant financial or scientific consequences, but a crewed vehicle must preserve human life under a wide range of failures and emergencies.</p><p>Human-rated vehicles require environmental control, pressure integrity, life support, crew restraints, emergency equipment and appropriate escape or abort strategies. Their design must also consider human tolerance to acceleration, vibration, temperature, radiation, noise and workload.</p><p>Uncrewed vehicles can sometimes tolerate greater levels of environmental exposure because the payload does not require a breathable atmosphere or continuous human support. They may also be able to operate for long periods autonomously.</p><p>However, uncrewed systems are not automatically simple or low-risk. A satellite may be impossible to repair after launch and may depend on highly reliable software, power, communication and attitude-control systems. An autonomous aircraft can also create new hazards because decisions are made by software rather than directly by a pilot.</p><p>The safety philosophy therefore changes with mission consequence. Human-rated systems generally require exceptionally strong fault tolerance and survival barriers, while uncrewed systems place greater emphasis on mission assurance, autonomous recovery and protection of valuable assets.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Speed, Mach Number and Altitude">
+<title>Speed, Mach Number and Altitude</title><desc>Speed relative to sound and altitude strongly influence aerodynamic behaviour.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Speed, Mach Number and Altitude</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Speed relative to sound and altitude strongly influence aerodynamic behaviour.</text>
+<g transform="translate(100 165)">
+<path d="M100 390V90M100 390H500" stroke="#68737d" stroke-width="3"/>
+<path d="M130 350L240 330L350 280L460 180" fill="none" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M130 340L240 310L350 220L460 100" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<path d="M650 360Q760 220 900 150T1080 100" fill="none" stroke="#ff5a1f" stroke-width="5"/>
+<path d="M650 360H1080" stroke="#39444f" stroke-width="2"/></g>
+<text x="120" y="65" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">SPEED / ALTITUDE</text><text x="510" y="180" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">MACH</text><text x="510" y="105" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">ALTITUDE</text><text x="770" y="410" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">COMPRESSIBILITY / HEATING</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s33">
+<div class="section-kicker">SUBJECT 03 · 33</div>
+<h2>Aircraft, Spacecraft and Hybrid Vehicles</h2>
+<div class="study-matter"><p>Some aerospace vehicles are designed to operate in more than one environment. Spaceplanes and other hybrid architectures combine characteristics of aircraft and spacecraft, creating a transition between aerodynamic and spaceflight regimes.</p><p>During atmospheric flight, such a vehicle may use wings, aerodynamic control surfaces and atmospheric propulsion. During spaceflight, it relies on spacecraft systems, orbital mechanics and reaction-control or rocket propulsion. Re-entry reverses the sequence and requires the vehicle to transition from spaceflight to controlled atmospheric flight.</p><p>The challenge is not simply combining two sets of hardware. The vehicle must remain controllable as the dominant physical forces change. Aerodynamic surfaces become ineffective in near-vacuum, while spacecraft propulsion and attitude systems become increasingly important. During re-entry, aerodynamic forces grow rapidly and the vehicle must tolerate high heating and deceleration.</p><p>Hybrid vehicles therefore have complex certification and safety requirements. Interfaces between different operating modes can become failure points. Software and control systems must know which regime the vehicle is in and apply appropriate guidance and control laws.</p><p>Understanding hybrid vehicles reinforces a central aerospace principle: safety depends on correctly managing transitions between physical environments as much as it depends on managing steady-state operation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Climb, Cruise and Descent">
+<title>Climb, Cruise and Descent</title><desc>A flight profile is a controlled sequence of changes in altitude and energy.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Climb, Cruise and Descent</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">A flight profile is a controlled sequence of changes in altitude and energy.</text>
+<path d="M90 400Q260 350 430 180Q600 100 760 210Q880 290 1080 390" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<circle cx="430" cy="180" r="12" fill="#ffb24a"/><circle cx="760" cy="210" r="12" fill="#8dffad"/><circle cx="1080" cy="390" r="12" fill="#ff6f70"/>
+<path d="M430 180V450M760 210V450" stroke="#39444f" stroke-dasharray="7 7"/>
+<text x="360" y="160" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="17">CLIMB</text><text x="580" y="145" text-anchor="start" fill="#8dffad" font-family="monospace" font-size="17">CRUISE</text><text x="900" y="350" text-anchor="start" fill="#ff6f70" font-family="monospace" font-size="17">DESCENT</text><text x="410" y="480" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ENERGY / ALTITUDE MANAGEMENT</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s34">
+<div class="section-kicker">SUBJECT 03 · 34</div>
+<h2>Why Aerospace Vehicles Are Fundamentally Different</h2>
+<div class="study-matter"><p>Aerospace vehicles operate with unusually high energy, tight performance margins and complex interactions between physical systems. Their failures can develop rapidly, occur far from maintenance facilities and affect large numbers of people or high-value assets.</p><p>An aircraft at altitude possesses significant kinetic and potential energy. A spacecraft in orbit possesses enormous orbital energy relative to the ground. Launch vehicles contain large quantities of chemical energy and must control that energy during acceleration. Re-entry vehicles must dissipate orbital energy safely through controlled atmospheric interaction.</p><p>Aerospace systems are also highly interconnected. Propulsion affects power, thermal behaviour and structural loads. Navigation affects guidance, which affects propulsion commands. Electrical failures can disable multiple systems. A software error can influence physical actuators and therefore change the vehicle&#x27;s trajectory.</p><p>The environment adds further difficulty. Turbulence, icing and weather affect aircraft; vacuum, radiation and thermal extremes affect spacecraft. Many aerospace vehicles cannot be physically accessed once they are operating, so faults must often be detected and managed remotely or autonomously.</p><p>These characteristics explain why aerospace engineering relies heavily on redundancy, fault tolerance, verification, simulation, certification, configuration control, maintenance and rigorous operational procedures.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Satellites">
+<title>Satellites</title><desc>Uncrewed orbital platforms for communication, navigation, science and observation</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Satellites</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Uncrewed orbital platforms for communication, navigation, science and observation</text>
+<g transform="translate(100 160)">
+<rect x="410" y="190" width="220" height="150" rx="12" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M410 215L180 130V370L410 315M630 215L860 130V370L630 315" fill="#16222d" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M520 190V95" stroke="#ffb24a" stroke-width="4"/><circle cx="520" cy="75" r="20" fill="#121a22" stroke="#ffb24a" stroke-width="3"/>
+<path d="M850 120Q950 60 1040 120" fill="none" stroke="#d4a1ff" stroke-width="3" stroke-dasharray="8 7"/></g><text x="180" y="425" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">SOLAR ARRAYS</text><text x="450" y="385" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">SPACECRAFT BUS</text><text x="860" y="90" text-anchor="start" fill="#d4a1ff" font-family="monospace" font-size="14">COMMUNICATION LINK</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s35">
+<div class="section-kicker">SUBJECT 03 · 35</div>
+<h2>The Aerospace Operating Environment</h2>
+<div class="study-matter"><p>The aerospace operating environment is not a single environment. It is a sequence of conditions that can include ground operations, take-off, dense atmosphere, high altitude, near-space, orbital space, re-entry and landing. Each stage changes the physical forces and hazards acting on the vehicle.</p><p>Near the ground, aircraft experience strong aerodynamic forces, runway interaction, weather and human activity. During climb, pressure and density decrease while propulsion and performance change. At high altitude, the atmosphere becomes thinner and physiological constraints become increasingly important.</p><p>Launch vehicles experience especially rapid transitions. They begin under Earth&#x27;s gravity and dense atmosphere, encounter changing aerodynamic loads and eventually enter a regime dominated by orbital mechanics. Re-entry reverses many of these conditions and introduces severe aerodynamic heating and deceleration.</p><p>Spacecraft may spend months or years in a vacuum environment, exposed to radiation and thermal cycling. They must continue operating without conventional maintenance access and often depend on autonomous fault management.</p><p>Safety engineering therefore begins with environmental definition. A hazard that is acceptable in one regime may be catastrophic in another. Correctly identifying the operating environment is one of the first steps in determining credible failure modes and effective safety barriers.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Approaching the Edge of the Atmosphere">
+<title>Approaching the Edge of the Atmosphere</title><desc>As altitude increases, aerodynamic lift becomes less useful and orbital dynamics become dominant.</desc>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="m" x1="0" x2="1"><stop stop-color="#101820"/><stop offset=".5" stop-color="#293640"/><stop offset="1" stop-color="#101820"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Approaching the Edge of the Atmosphere</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">As altitude increases, aerodynamic lift becomes less useful and orbital dynamics become dominant.</text>
+<g transform="translate(80 160)">
+<path d="M80 400Q260 300 430 350T650 290T900 170" fill="none" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M80 450H1050" stroke="#39444f" stroke-width="3"/>
+<path d="M260 330L400 275L500 310L400 335Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M650 290L720 215L780 275L725 325Z" fill="#151e27" stroke="#d8dfe4" stroke-width="3"/>
+<path d="M790 275Q900 80 1050 150" fill="none" stroke="#ffb24a" stroke-width="4"/>
+<path d="M650 500V315" stroke="#ff5a1f" stroke-width="4" marker-end="url(#a)"/></g>
+<text x="110" y="500" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">ATMOSPHERIC FLIGHT</text><text x="610" y="500" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">TRANSITION</text><text x="890" y="110" text-anchor="start" fill="#ffb24a" font-family="monospace" font-size="14">ORBITAL REGIME</text><text x="675" y="300" text-anchor="start" fill="#ff5a1f" font-family="monospace" font-size="14">AERODYNAMIC CONTROL WEAKENS</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section><section id="s36">
+<div class="section-kicker">SUBJECT 03 · 36</div>
+<h2>Why These Fundamentals Matter to Aerospace Safety</h2>
+<div class="study-matter"><p>Aerospace safety cannot be separated from the physical behaviour of the vehicle. Before a hazard can be identified, an engineer must understand what the vehicle is intended to do, which forces make that possible, what energy it contains and what environmental conditions surround it.</p><p>Consider a loss of engine thrust. Without understanding lift, drag, weight and flight energy, it is difficult to determine whether the aircraft can glide safely, how far it can travel or which control actions are required. Similarly, without understanding orbital mechanics, a spacecraft propulsion failure cannot be evaluated simply by asking whether the engine has stopped; the effect depends on the vehicle&#x27;s current orbit, velocity and mission trajectory.</p><p>The same principle applies to spacecraft thermal, power, communication and life-support systems. Safety analysis requires knowledge of how these systems interact and which functions are essential to maintaining a safe state.</p><p>These fundamentals therefore provide the vocabulary for later safety engineering subjects: hazard identification, risk assessment, failure analysis, fault trees, FMEA, human factors, emergency response, maintenance safety, safety management systems and accident investigation.</p><p>A strong aerospace safety professional does not memorise isolated hazards. The professional understands the physical system well enough to predict where hazards can arise, how failures can propagate and which barriers can prevent an unsafe condition from becoming an accident.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Space Stations">
+<title>Space Stations</title><desc>Large orbital habitats combine modules, life support and crew systems</desc>
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb24a"/></marker>
+<marker id="cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7ce7ff"/></marker>
+<linearGradient id="metal" x1="0" x2="1"><stop stop-color="#111922"/><stop offset=".5" stop-color="#26323d"/><stop offset="1" stop-color="#10171e"/></linearGradient>
+</defs>
+<rect width="1200" height="650" rx="26" fill="#080b10"/>
+<text x="55" y="55" fill="#74808b" font-family="monospace" font-size="13" letter-spacing="2.5">AEROSPACE SAFETY · SUBJECT 03</text>
+<text x="55" y="100" fill="#eef2f4" font-family="Arial" font-size="31" font-weight="700">Space Stations</text>
+<text x="55" y="130" fill="#89939d" font-family="Arial" font-size="15">Large orbital habitats combine modules, life support and crew systems</text>
+<g transform="translate(60 165)">
+<rect x="470" y="180" width="260" height="120" rx="25" fill="url(#metal)" stroke="#d8dfe4" stroke-width="3"/>
+<rect x="120" y="215" width="300" height="55" rx="18" fill="#121a22" stroke="#7ce7ff" stroke-width="3"/>
+<rect x="780" y="215" width="300" height="55" rx="18" fill="#121a22" stroke="#7ce7ff" stroke-width="3"/>
+<path d="M250 215V80M850 215V80M250 270V405M850 270V405" stroke="#ffb24a" stroke-width="4"/>
+<path d="M140 80H360M740 80H960M140 405H360M740 405H960" stroke="#7ce7ff" stroke-width="4"/>
+<circle cx="600" cy="240" r="28" fill="#121a22" stroke="#8dffad" stroke-width="3"/></g><text x="475" y="345" text-anchor="start" fill="#cbd3d9" font-family="monospace" font-size="14">HABITAT</text><text x="105" y="55" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">SOLAR POWER</text><text x="820" y="55" text-anchor="start" fill="#7ce7ff" font-family="monospace" font-size="14">SOLAR POWER</text><text x="470" y="430" text-anchor="start" fill="#8dffad" font-family="monospace" font-size="14">LIFE SUPPORT / DOCKING / CREW OPERATIONS</text></svg></div>
+<div class="exam-focus">
+<strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the concept, explain its operating principle, identify the principal engineering parameters, and relate the concept to aerospace operational safety.</p>
+</div>
+</section>
+</main>
+</div>
+
+<footer class="footer">
+<span>AEROSPACE SAFETY · SUBJECT 03</span>
+<span class="signature">Compiled and Designed by <b>Praveen Kunjumon</b></span>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(e.isIntersecting){
+  e.target.style.opacity='1';
+  e.target.style.transform='translateY(0)';
+ }
+}),{threshold:.06});
+document.querySelectorAll('.reader section').forEach(el=>{
+ el.style.opacity='.15';
+ el.style.transform='translateY(14px)';
+ el.style.transition='opacity .8s ease,transform .8s ease';
+ observer.observe(el);
+});
+</script>
+</body>
+</html>
