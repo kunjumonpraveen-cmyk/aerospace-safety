@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070a0f">
+<title>Sub 5 — Fundamentals of Flight Safety</title>
+<style>
+
+
+
+:root{--bg:#06080c;--paper:#0c1117;--panel:#111822;--ink:#edf1f4;--muted:#89939d;--line:#26313b;--fire:#ff5a1f;--gold:#ffb24a;--cyan:#7ce7ff;--green:#8dffad}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.82}.grain{position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:30;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{position:fixed;top:0;left:0;right:0;height:72px;z-index:20;background:#06080ce8;backdrop-filter:blur(16px);border-bottom:1px solid #172029;display:flex;justify-content:space-between;align-items:center;padding:0 5vw}.brand{color:#fff;text-decoration:none;font:10px monospace;letter-spacing:.14em}.brand b{color:var(--fire)}.back{color:#89939d;text-decoration:none;font:10px monospace}.back:hover{color:#fff}
+.hero{min-height:82vh;padding:150px 8vw 80px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 45%,#291108 0,transparent 30%),radial-gradient(circle at 90% 20%,#10252c 0,transparent 22%)}.hero:after{content:"";position:absolute;width:680px;height:680px;border:1px solid #27323b;border-radius:50%;right:-180px;top:10%;transform:rotate(28deg)}.hero-content{position:relative;z-index:2;max-width:1000px}.eyebrow,.section-kicker{font:10px monospace;letter-spacing:.2em;color:#77828d}.hero h1{font-size:clamp(52px,9vw,130px);line-height:.84;letter-spacing:-.075em;margin:18px 0}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px #aab3bb}.hero p{max-width:760px;color:#9aa4ad;font-size:18px}.meta{display:flex;gap:28px;margin-top:45px;flex-wrap:wrap}.meta div{border-left:1px solid #39434d;padding-left:13px}.meta strong{display:block;font-size:25px}.meta span{font:9px monospace;color:#68737d;letter-spacing:.1em}
+.layout{max-width:1450px;margin:auto;padding:80px 6vw;display:grid;grid-template-columns:260px minmax(0,1fr);gap:70px}.toc{position:sticky;top:100px;align-self:start;border:1px solid #202a34;background:#0a0e13;padding:20px;max-height:calc(100vh - 130px);overflow:auto}.toc-title{font:10px monospace;color:var(--fire);letter-spacing:.16em;margin-bottom:15px}.toc a{display:flex;gap:12px;padding:8px 0;color:#7f8993;text-decoration:none;font:11px/1.35 monospace;border-bottom:1px solid #141b22}.toc a span{color:#46515c}.toc a:hover{color:#fff}.reader{min-width:0}.reader section{padding:0 0 100px;margin-bottom:95px;border-bottom:1px solid #1c252e}.reader h2{font-size:clamp(34px,5vw,66px);line-height:.98;letter-spacing:-.055em;margin:15px 0 35px;max-width:900px}.reader p{font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.9;color:#c1c8ce;max-width:850px;margin:0 0 24px}.reader svg{display:block;width:100%;height:auto;margin:48px 0;border:1px solid #202a34;background:#0d1118}.assessment{background:linear-gradient(145deg,#111720,#0b0f14);padding:38px;border:1px solid #26313b}.assessment h2{margin-top:0}.footer{padding:40px 6vw;border-top:1px solid #172029;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:9px monospace;color:#68737d;letter-spacing:.1em}.signature{color:#b8c0c7}.signature b{color:#fff}
+@media(max-width:900px){.layout{display:block;padding:50px 6vw}.toc{position:relative;top:auto;max-height:300px;margin-bottom:55px}.hero{min-height:75vh;padding:140px 6vw 65px}.hero:after{right:-480px}.reader p{font-size:17px}.reader section{padding-bottom:70px;margin-bottom:70px}}
+
+.study-matter p{font-size:1.04rem;line-height:1.9;max-width:900px;color:#cbd3d9;margin:0 0 1.25rem}
+.technical-plate{margin:2rem 0 2.5rem;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.technical-plate svg{display:block;width:100%;height:auto}
+.exam-focus{border-left:3px solid #ffb24a;padding:1rem 1.25rem;margin-top:2rem;background:rgba(255,178,74,.035)}
+.exam-focus strong{font-family:monospace;font-size:.78rem;letter-spacing:.12em;color:#ffb24a}
+.exam-focus p{margin:.55rem 0 0;color:#aeb8c0}
+
+.study-matter p{font-size:1.04rem;line-height:1.9;max-width:900px;color:#cbd3d9;margin:0 0 1.25rem}
+.technical-plate{margin:2rem 0 2.5rem;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.technical-plate svg{display:block;width:100%;height:auto}
+.exam-focus{border-left:3px solid #ffb24a;padding:1rem 1.25rem;margin-top:2rem;background:rgba(255,178,74,.035)}
+.exam-focus strong{font-family:monospace;font-size:.78rem;letter-spacing:.12em;color:#ffb24a}
+.exam-focus p{margin:.55rem 0 0;color:#aeb8c0}
+
+.study-matter p{font-size:1.04rem;line-height:1.9;max-width:900px;color:#cbd3d9;margin:0 0 1.25rem}
+.technical-plate{margin:35px 0;border:1px solid #1d252d;border-radius:22px;overflow:hidden;background:#070a0f}
+.technical-plate svg{display:block;width:100%;height:auto}
+.exam-focus{border-left:3px solid #ffb24a;padding:15px 20px;background:#ffb24a08;color:#aeb8c0;margin-top:30px}
+.exam-focus strong{font:12px monospace;letter-spacing:.12em;color:#ffb24a}
+.exam-focus p{margin:.55rem 0 0;line-height:1.7}
+</style></head>
+<body>
+<nav class="nav"><a href="index.html">PROJECT SAFETY 200 · AEROSPACE SAFETY</a><a href="index.html">← LIBRARY INDEX</a></nav>
+<header class="hero"><div class="hero-content">
+<div class="eyebrow">SUBJECT 05 · FLIGHT SAFETY · 100 MARKS</div>
+<h1>FUNDAMENTALS OF<br><em>FLIGHT SAFETY</em></h1>
+<p>A comprehensive foundation in the principles, operating phases, aircraft behaviour, environmental threats, systems, human factors and safety barriers that keep flight within a controlled and recoverable state.</p>
+<div class="meta"><div><strong>05</strong><span>SUBJECT</span></div><div><strong>100</strong><span>MARKS</span></div><div><strong>36</strong><span>TOPICS</span></div><div><strong>36</strong><span>SVG PLATES</span></div></div>
+</div></header>
+<div class="layout"><aside class="toc"><div class="toc-title">CONTENTS · 36 TOPICS</div><a href="#s1"><span>01</span>Concept and Definition of Flight Safety</a>
+<a href="#s2"><span>02</span>Evolution and Philosophy of Flight Safety</a>
+<a href="#s3"><span>03</span>Safety-Critical Nature of Flight Operations</a>
+<a href="#s4"><span>04</span>The Aircraft Operating Environment</a>
+<a href="#s5"><span>05</span>Phases of Flight and Changing Safety Risks</a>
+<a href="#s6"><span>06</span>Pre-Flight Safety</a>
+<a href="#s7"><span>07</span>Ground Operations and Taxi Safety</a>
+<a href="#s8"><span>08</span>Take-Off Safety</a>
+<a href="#s9"><span>09</span>Initial Climb Safety</a>
+<a href="#s10"><span>10</span>Climb and Cruise Safety</a>
+<a href="#s11"><span>11</span>Descent and Approach Safety</a>
+<a href="#s12"><span>12</span>Landing Safety</a>
+<a href="#s13"><span>13</span>Post-Landing and Shutdown Safety</a>
+<a href="#s14"><span>14</span>Aircraft Energy Management</a>
+<a href="#s15"><span>15</span>Airspeed and Flight Safety</a>
+<a href="#s16"><span>16</span>Altitude, Terrain Clearance and Minimum Safe Altitude</a>
+<a href="#s17"><span>17</span>Aircraft Stability and Controllability</a>
+<a href="#s18"><span>18</span>Stall and Loss-of-Control Safety</a>
+<a href="#s19"><span>19</span>Aircraft Upsets and Spin Prevention</a>
+<a href="#s20"><span>20</span>Manoeuvring and Structural Load Safety</a>
+<a href="#s21"><span>21</span>Weather and Flight Safety</a>
+<a href="#s22"><span>22</span>Turbulence, Wind Shear and Adverse Wind</a>
+<a href="#s23"><span>23</span>Icing, Contamination and Atmospheric Hazards</a>
+<a href="#s24"><span>24</span>Visibility and Instrument Meteorological Conditions</a>
+<a href="#s25"><span>25</span>Propulsion Reliability and Engine Safety</a>
+<a href="#s26"><span>26</span>Fuel Management and Fuel Safety</a>
+<a href="#s27"><span>27</span>Flight-Control System Safety</a>
+<a href="#s28"><span>28</span>Electrical, Hydraulic and Pneumatic System Safety</a>
+<a href="#s29"><span>29</span>Avionics, Navigation and Communication Safety</a>
+<a href="#s30"><span>30</span>Human Factors in Flight Safety</a>
+<a href="#s31"><span>31</span>Crew Resource Management</a>
+<a href="#s32"><span>32</span>Automation and Flight-Deck Safety</a>
+<a href="#s33"><span>33</span>Emergency Procedures and Abnormal Operations</a>
+<a href="#s34"><span>34</span>Aircraft Fire, Evacuation and Emergency Safety</a>
+<a href="#s35"><span>35</span>Accident Prevention, Safety Barriers and Recovery</a>
+<a href="#s36"><span>36</span>Integrated Flight-Safety Management</a></aside>
+<main class="reader"><section id="s1">
+<div class="section-kicker">SUBJECT 05 · 01</div>
+<h2>Concept and Definition of Flight Safety</h2>
+<div class="study-matter"><p>Flight safety is the systematic prevention of accidents, serious incidents, injuries, aircraft damage and unacceptable operational risk during the life of a flight. It is broader than simply avoiding crashes. A safe flight is one in which the aircraft, crew, passengers, people on the ground and supporting infrastructure remain within controlled and acceptable conditions.</p><p>Flight safety combines engineering, operations, human factors, maintenance, meteorology, air traffic management, emergency response and organisational management. The central idea is control. Aircraft are continuously exposed to hazards, but exposure does not automatically produce an accident. Safety depends on maintaining sufficient margins and ensuring that failures are detected, contained and recovered before they become catastrophic.</p><p>A useful distinction is between hazard, risk and accident. A hazard is a condition with the potential to cause harm. Risk considers both the likelihood of an unwanted outcome and its severity. An accident is an actual occurrence producing defined consequences. Flight-safety engineering therefore seeks to identify hazards early, reduce risk, establish protective barriers and maintain those barriers during operations.</p><p>Flight safety is also a dynamic discipline. Weather changes, aircraft condition changes, crew workload changes and the operating environment changes during a single flight. A procedure that is adequate in one phase may be inappropriate in another. Safety therefore requires continuous assessment rather than a one-time decision made before departure.</p><p>For an aviation safety professional, the objective is not to eliminate every hazard—an impossible goal—but to keep the system within controlled operating limits, provide adequate margins, detect deterioration early and ensure effective recovery when prevention fails.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Concept and Definition of Flight Safety">
+<title>Concept and Definition of Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 01</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Concept and Definition of Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 450H1090" stroke="#39444f" stroke-width="4"/>
+<path d="M150 410Q320 180 520 330T1040 220" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M520 330V190" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M520 330L690 390" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<path d="M690 390H1010" stroke="#8dffad" stroke-width="5"/>
+<text x="155" y="515" fill="#cbd3d9" font-family="monospace" font-size="17">CONTROLLED FLIGHT · MARGINS · RECOVERY</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s2">
+<div class="section-kicker">SUBJECT 05 · 02</div>
+<h2>Evolution and Philosophy of Flight Safety</h2>
+<div class="study-matter"><p>Modern flight safety developed through experience, engineering improvement and systematic investigation of accidents and incidents. Early aviation depended heavily on individual skill and mechanical reliability. As aircraft became faster, heavier and more complex, safety could no longer depend mainly on pilot ability. Organisational procedures, certification, maintenance systems, navigation infrastructure and formal risk management became increasingly important.</p><p>The philosophy of flight safety has progressively moved from a purely reactive model toward prevention. In a reactive model, an accident occurs, investigators determine what happened, and corrective measures are introduced. Reactive learning remains essential, but mature safety systems also examine weak signals, near misses, unstable approaches, equipment defects, maintenance findings and operational trends before serious harm occurs.</p><p>Another important development is the recognition that accidents rarely have a single cause. A technical failure may combine with poor weather, workload, inadequate procedures, communication problems and organisational weaknesses. Safety philosophy therefore considers the interaction of multiple defences rather than searching only for the final error.</p><p>Contemporary safety thinking also distinguishes safety from mere compliance. Regulations establish minimum requirements, but compliance alone cannot guarantee safe outcomes. Operators need a positive safety culture in which personnel report hazards, managers understand operational realities and corrective actions address underlying causes.</p><p>The modern philosophy can therefore be expressed as several linked principles: anticipate hazards, design them out where possible, provide independent barriers, monitor system performance, learn from failures and continuously improve. The strongest safety systems do not assume that competent people will never make mistakes. Instead, they design operations so that predictable human and technical errors do not automatically become accidents.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Evolution and Philosophy of Flight Safety">
+<title>Evolution and Philosophy of Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 02</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Evolution and Philosophy of Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="310" cy="310" r="125" fill="#111922" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M310 185V120M310 435V500M185 310H120M435 310H500" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M310 310L390 255" stroke="#ffb24a" stroke-width="8" marker-end="url(#a)"/>
+<path d="M620 190H1030M620 310H1030M620 430H1030" stroke="#39444f" stroke-width="3"/>
+<path d="M650 390L770 350L870 290L1010 220" fill="none" stroke="#8dffad" stroke-width="7"/>
+<text x="175" y="555" fill="#cbd3d9" font-family="monospace" font-size="16">SAFETY PHILOSOPHY → CONTINUOUS IMPROVEMENT</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s3">
+<div class="section-kicker">SUBJECT 05 · 03</div>
+<h2>Safety-Critical Nature of Flight Operations</h2>
+<div class="study-matter"><p>Flight operations are safety-critical because a relatively small deviation can develop into a high-consequence event while the aircraft is moving through a demanding physical environment. Unlike many industrial activities, flight provides limited opportunity for physical intervention after a major failure. Distance from the ground, aircraft speed, energy state and limited emergency options make prevention and early recognition especially important.</p><p>Several characteristics create this safety-critical nature. Aircraft operate with significant kinetic and potential energy. Propulsion, flight controls, electrical systems, fuel systems and pressurisation may all be essential to continued safe operation. Failures can interact, and the time available for diagnosis may be short. The crew must often make decisions while simultaneously controlling the aircraft, communicating and managing workload.</p><p>Safety-critical does not mean that every component must be failure-proof. Aviation engineering uses concepts such as redundancy, independence, fail-safe behaviour, fault detection, isolation and controlled degradation. The objective is to prevent a single credible failure from causing catastrophic loss of control or to provide adequate recovery capability when a failure occurs.</p><p>Operational discipline is equally important. Checklists, standard operating procedures, crew cross-checks, maintenance controls, dispatch criteria and air traffic procedures create layers around the aircraft. These layers are designed to catch errors before they propagate.</p><p>Aviation therefore provides a classic example of a complex socio-technical system. The aircraft is only one part. People, software, maintenance organisations, airports, weather services, navigation systems, regulators and management decisions all influence the final safety outcome. Understanding this system perspective is essential for effective flight-safety management.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Safety-Critical Nature of Flight Operations">
+<title>Safety-Critical Nature of Flight Operations</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 03</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Safety-Critical Nature of Flight Operations</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M100 440V150H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M150 405L280 360L410 375L540 300L670 325L800 245L950 275L1040 190" fill="none" stroke="#ffb24a" stroke-width="8"/>
+<path d="M150 420L280 395L410 400L540 365L670 380L800 350L950 355L1040 330" fill="none" stroke="#7ce7ff" stroke-width="5"/>
+<circle cx="800" cy="245" r="17" fill="#ff5a1f"/>
+<text x="155" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">SAFETY ENVELOPE · DEVIATION · CONSEQUENCE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s4">
+<div class="section-kicker">SUBJECT 05 · 04</div>
+<h2>The Aircraft Operating Environment</h2>
+<div class="study-matter"><p>The aircraft operating environment is three-dimensional, dynamic and continuously changing. An aircraft may encounter atmospheric turbulence, wind gradients, precipitation, icing, thunderstorms, reduced visibility, high temperatures, terrain, other aircraft, birds and changes in air traffic restrictions. The same aircraft may therefore have very different risk levels on different flights.</p><p>Altitude affects pressure, temperature, oxygen availability, aircraft performance and emergency options. Air density decreases with altitude, influencing engine performance, aerodynamic behaviour and take-off or climb capability. Terrain becomes a major consideration during departure, approach and low-level operations. Over mountainous areas, weather and terrain can combine to reduce escape options.</p><p>Airports introduce another environment containing runways, taxiways, vehicles, ground personnel, obstacles, fuel systems, jet blast, propeller hazards and complex traffic patterns. The aircraft must transition safely between the ground and airborne environments.</p><p>The atmosphere is also a major safety variable. Wind direction and speed influence runway operations, aircraft groundspeed and flight-path control. Turbulence creates structural and occupant hazards. Temperature affects aircraft performance and can influence icing, density altitude and engine operation. Weather information is therefore part of the safety system rather than merely a convenience for flight planning.</p><p>The operating environment also includes human and organisational factors. Air traffic congestion, communication workload, unfamiliar airports, time pressure and operational changes can increase crew workload.</p><p>Safe flight requires continuous awareness of this environment. Pilots and safety systems must identify relevant changes, understand their effects on aircraft performance and maintain adequate margins. Environmental conditions should therefore be treated as operational inputs that can alter the safety envelope of the flight.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="The Aircraft Operating Environment">
+<title>The Aircraft Operating Environment</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 04</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">The Aircraft Operating Environment</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 430Q230 190 410 310T720 230T1090 300" fill="none" stroke="#7ce7ff" stroke-width="6"/>
+<path d="M260 150L320 245M520 120L580 240M790 145L850 250" stroke="#ff5a1f" stroke-width="11" marker-end="url(#r)"/>
+<circle cx="570" cy="240" r="46" fill="#111922" stroke="#ffb24a" stroke-width="5"/>
+<path d="M570 194V286M524 240H616" stroke="#ffb24a" stroke-width="4"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">ENVIRONMENT + AIRCRAFT + HUMAN + INFRASTRUCTURE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s5">
+<div class="section-kicker">SUBJECT 05 · 05</div>
+<h2>Phases of Flight and Changing Safety Risks</h2>
+<div class="study-matter"><p>Risk is not constant throughout a flight. Each phase has different aircraft configurations, energy states, environmental conditions, crew tasks and available recovery options. Understanding this variation is fundamental to flight safety.</p><p>During pre-flight, major risks involve incorrect planning, unsuitable weather assessment, aircraft defects, fuel errors, loading problems and incomplete preparation. During taxi, collision, runway-incursion and ground-equipment hazards become important. Take-off is particularly demanding because the aircraft transitions from ground support to flight and rapidly accumulates energy while the runway and surrounding terrain constrain options.</p><p>Initial climb presents risks involving terrain clearance, engine failure, configuration, navigation and workload. Cruise normally provides greater time and altitude for problem solving, but long-duration exposure introduces other concerns such as fatigue, weather deviation, system failures and navigation or communication problems.</p><p>Descent and approach progressively reduce altitude and available recovery time. Configuration changes, weather, terrain, traffic and workload can combine to produce unstable approaches or loss of situational awareness. Landing involves high workload, low altitude, runway alignment, braking and crosswind considerations.</p><p>Post-landing introduces another set of hazards, including runway or taxiway conflicts, hot brakes, engine or auxiliary-power-unit hazards, ground personnel exposure and incorrect shutdown procedures.</p><p>The important principle is that the same hazard may have different consequences in different phases. An engine malfunction in cruise may permit a long diversion, while the same malfunction immediately after take-off may require an immediate emergency response. Safety management therefore has to be phase-specific.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Phases of Flight and Changing Safety Risks">
+<title>Phases of Flight and Changing Safety Risks</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 05</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Phases of Flight and Changing Safety Risks</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><g transform="translate(110 165)">
+<circle cx="120" cy="230" r="52" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="92" y="237" fill="#7ce7ff" font-family="monospace" font-size="15">PRE</text><circle cx="300" cy="230" r="52" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="272" y="237" fill="#7ce7ff" font-family="monospace" font-size="15">T/O</text><circle cx="480" cy="230" r="52" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="452" y="237" fill="#7ce7ff" font-family="monospace" font-size="15">CRZ</text><circle cx="660" cy="230" r="52" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="632" y="237" fill="#ffb24a" font-family="monospace" font-size="15">LND</text>
+<path d="M172 230H248" stroke="#7ce7ff" stroke-width="5" marker-end="url(#b)"/><path d="M352 230H428" stroke="#7ce7ff" stroke-width="5" marker-end="url(#b)"/><path d="M532 230H608" stroke="#7ce7ff" stroke-width="5" marker-end="url(#b)"/>
+<path d="M120 90Q390 10 660 90" fill="none" stroke="#ff5a1f" stroke-width="4"/>
+</g>
+<text x="205" y="500" fill="#cbd3d9" font-family="monospace" font-size="17">RISK PROFILE CHANGES BY FLIGHT PHASE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s6">
+<div class="section-kicker">SUBJECT 05 · 06</div>
+<h2>Pre-Flight Safety</h2>
+<div class="study-matter"><p>Pre-flight safety establishes the initial conditions from which the flight will be conducted. It includes aircraft serviceability, crew readiness, weather assessment, route planning, fuel planning, loading, performance calculations, navigation preparation and review of operational restrictions.</p><p>Aircraft inspection is a critical barrier. External inspection can identify leaks, damage, contamination, tyre or landing-gear problems, missing panels, unusual fluid traces and control-surface abnormalities. Cockpit checks verify indications, controls, electrical configuration and required equipment. Defects must be evaluated through the appropriate maintenance and operational procedures rather than being dismissed because the aircraft appears generally serviceable.</p><p>Weather planning must consider more than the departure airport. Conditions along the route and at the destination and alternate locations may affect fuel requirements, route selection and emergency options. Temperature, wind, thunderstorms, icing and visibility can alter aircraft performance and operational feasibility.</p><p>Loading and mass distribution are also safety-critical. Excess mass reduces performance, while an incorrect centre of gravity can affect stability, control and stall characteristics. Fuel must be sufficient not merely for the planned cruise but for foreseeable delays, diversions and required reserves.</p><p>Crew preparation includes briefing, task allocation, threat identification and review of abnormal situations. A strong pre-flight process anticipates problems before the aircraft leaves the ground.</p><p>The goal is not simply to complete a checklist. It is to establish a known and acceptable starting condition, identify uncertainties and ensure that the crew has a practical plan for dealing with foreseeable changes. Good pre-flight preparation is therefore an active risk-control process.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Pre-Flight Safety">
+<title>Pre-Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 06</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Pre-Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><rect x="120" y="160" width="390" height="300" rx="25" fill="#101820" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M160 230H470M160 300H420M160 370H450M160 430H380" stroke="#8dffad" stroke-width="9"/>
+<path d="M660 430V160M660 430H1060" stroke="#39444f" stroke-width="4"/>
+<path d="M710 390Q820 310 1010 220" fill="none" stroke="#ffb24a" stroke-width="7"/>
+<circle cx="850" cy="300" r="13" fill="#ff5a1f"/>
+<text x="165" y="135" fill="#7ce7ff" font-family="monospace" font-size="16">CHECKS / CONFIGURATION</text>
+<text x="700" y="475" fill="#cbd3d9" font-family="monospace" font-size="16">READY STATE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s7">
+<div class="section-kicker">SUBJECT 05 · 07</div>
+<h2>Ground Operations and Taxi Safety</h2>
+<div class="study-matter"><p>Ground operations occur while the aircraft is close to people, vehicles, buildings and other aircraft. The aircraft may be moving under its own power or being towed, and visibility can be restricted by the cockpit structure, weather or airport geometry. Ground safety therefore depends heavily on communication, disciplined procedures and situational awareness.</p><p>Taxiing requires correct route identification, speed control, observation of signs and markings and compliance with air traffic instructions. Runway incursions are particularly serious because an aircraft, vehicle or person can enter a protected runway area while another aircraft is taking off or landing. Clearances must be understood rather than merely heard, and pilots should actively monitor the aircraft&#x27;s position.</p><p>Jet blast, propeller wash and rotor downwash can cause severe injury or damage even when an engine or rotor appears physically distant. Ground personnel must respect designated safety zones. Engine start and shutdown areas require appropriate clearance and communication.</p><p>Towing introduces additional hazards because the person controlling the aircraft may not have the same visibility or control as the flight crew. Proper signalling, headset communication, braking arrangements and exclusion zones are important.</p><p>Taxiway lighting, signs and markings form an important visual safety system, particularly at night or in poor visibility. Foreign-object debris can damage engines, tyres or flight-control surfaces and must be controlled.</p><p>Ground safety is therefore not a low-risk version of flight safety. It is a distinct operating environment with its own hazards. Effective safety depends on coordination among pilots, controllers, marshallers, ground crews, maintenance personnel and airport operators.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Ground Operations and Taxi Safety">
+<title>Ground Operations and Taxi Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 07</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Ground Operations and Taxi Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440H1090" stroke="#39444f" stroke-width="4"/>
+<path d="M170 420V310M290 420V310M410 420V310M530 420V310M650 420V310M770 420V310M890 420V310" stroke="#222d36" stroke-width="3"/>
+<path d="M150 400L270 365L390 340L510 310L630 275L750 250L870 225L1030 195" fill="none" stroke="#7ce7ff" stroke-width="8"/>
+<path d="M510 310V170" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<text x="150" y="505" fill="#cbd3d9" font-family="monospace" font-size="16">GROUND MOVEMENT → TAXI → RUNWAY PROTECTION</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s8">
+<div class="section-kicker">SUBJECT 05 · 08</div>
+<h2>Take-Off Safety</h2>
+<div class="study-matter"><p>Take-off is one of the most demanding phases because the aircraft accelerates rapidly while remaining constrained by runway length, surface condition, obstacles and aircraft performance. A safe take-off begins with correct mass, configuration, performance calculations and runway assessment.</p><p>The aircraft must reach sufficient speed for rotation and subsequent climb while maintaining directional control. Wind affects groundspeed and performance. Runway contamination can increase acceleration distance and reduce braking capability. Temperature, elevation and aircraft mass can also reduce available performance.</p><p>A critical concept is the decision point associated with continued or rejected take-off. The crew must understand the aircraft&#x27;s performance and the operational procedures governing an abnormal event during the take-off roll. Below the relevant decision criteria, stopping may be the preferred response for specified failures; after that point, continuing the take-off may provide the safer outcome depending on aircraft type and procedure.</p><p>Engine failure during take-off is particularly significant because the aircraft may have limited altitude and high workload. The response must be immediate, disciplined and appropriate to the phase of flight. Directional control, pitch attitude, configuration and terrain clearance are fundamental.</p><p>Runway alignment and centreline control are also important. Crosswind, asymmetric thrust or steering problems can produce directional deviation.</p><p>Take-off safety is therefore a combination of preparation, performance knowledge, disciplined decision-making and immediate control of the aircraft. The most effective protection is created before power is applied: correct planning reduces the probability that the aircraft will enter a situation from which recovery is difficult.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Take-Off Safety">
+<title>Take-Off Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 08</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Take-Off Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 450H1080" stroke="#39444f" stroke-width="4"/>
+<path d="M160 430L300 370L440 305L580 235L740 175L930 130" fill="none" stroke="#7ce7ff" stroke-width="8"/>
+<path d="M300 370L405 300L480 335L400 395Z" fill="#111922" stroke="#f2f5f7" stroke-width="3"/>
+<path d="M580 235V100" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<text x="160" y="515" fill="#cbd3d9" font-family="monospace" font-size="17">ROTATION · LIFTOFF · CLIMB MARGIN</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s9">
+<div class="section-kicker">SUBJECT 05 · 09</div>
+<h2>Initial Climb Safety</h2>
+<div class="study-matter"><p>The initial climb begins immediately after take-off and continues while the aircraft is still relatively close to the ground. It is a high-consequence phase because altitude and time are limited. Terrain clearance, engine performance, aircraft configuration and navigation are therefore central concerns.</p><p>After liftoff, the aircraft must establish the appropriate climb attitude and confirm a positive rate of climb. Configuration changes such as landing-gear and flap retraction must occur according to the aircraft&#x27;s procedures and performance requirements. Premature or incorrect configuration can reduce climb performance.</p><p>Engine failure is a major threat. The available response depends on aircraft type, altitude, terrain and configuration. At very low altitude, the priority is maintaining aircraft control and selecting a survivable flight path rather than attempting an elaborate troubleshooting sequence.</p><p>Terrain awareness is essential, especially in mountainous areas. Departure procedures are designed around obstacle clearance assumptions, and deviations may reduce the intended safety margin.</p><p>The crew also transitions rapidly from take-off tasks to navigation, communication and aircraft management. This can produce workload peaks. Clear division of duties and adherence to standard procedures reduce the chance of omitted actions.</p><p>Initial climb safety therefore depends on preserving three things: control of the aircraft, sufficient performance and adequate clearance from terrain and obstacles. When an abnormal event occurs, the correct response is usually the one that protects these fundamentals first. Complex secondary actions should never compromise basic aircraft control.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Initial Climb Safety">
+<title>Initial Climb Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 09</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Initial Climb Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 450Q300 300 470 285T820 190T1080 155" fill="none" stroke="#7ce7ff" stroke-width="8"/>
+<path d="M470 285V145" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M700 230L830 190" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<text x="160" y="515" fill="#cbd3d9" font-family="monospace" font-size="16">POSITIVE CLIMB · TERRAIN · CONFIGURATION</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s10">
+<div class="section-kicker">SUBJECT 05 · 10</div>
+<h2>Climb and Cruise Safety</h2>
+<div class="study-matter"><p>During climb and cruise, the aircraft normally has more altitude and time available for decision-making than during take-off or landing. This larger margin does not eliminate risk. Instead, the nature of the risks changes.</p><p>Climb performance depends on aircraft mass, atmospheric conditions, engine performance and configuration. High temperature and high elevation reduce air density and can affect climb capability. The crew must monitor engine indications, aircraft performance and compliance with the planned route.</p><p>Cruise introduces long-duration operation. Fuel management becomes important because fuel burn, winds, altitude changes, delays and diversions influence the remaining margin. A flight may also encounter weather systems that require deviation. The safety decision is not simply whether a route is possible, but whether sufficient fuel, terrain clearance, navigation capability and diversion options remain.</p><p>System failures during cruise may provide time for diagnosis, but complacency can develop when workload is low. A minor abnormal indication can become significant if it is ignored. Conversely, unnecessary action can introduce new risks. Good safety practice uses procedures, cross-checks and trend monitoring.</p><p>Pressurisation is another important cruise consideration in many aircraft. Loss of cabin pressure can rapidly change the physiological environment and may require emergency descent.</p><p>Communication and navigation failures can also occur. Redundancy, procedural knowledge and situational awareness allow the crew to continue safely or divert when required.</p><p>Cruise safety therefore depends on maintaining margins, monitoring system trends and avoiding the assumption that a quiet cockpit is necessarily a risk-free cockpit.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Climb and Cruise Safety">
+<title>Climb and Cruise Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 10</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Climb and Cruise Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440Q300 280 470 315T760 250T1080 300" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<circle cx="590" cy="285" r="48" fill="#111922" stroke="#ffb24a" stroke-width="5"/>
+<path d="M590 285L635 250" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M850 250L970 220" stroke="#ff5a1f" stroke-width="5" marker-end="url(#r)"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="17">CRUISE: MONITOR · PLAN · PRESERVE OPTIONS</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s11">
+<div class="section-kicker">SUBJECT 05 · 11</div>
+<h2>Descent and Approach Safety</h2>
+<div class="study-matter"><p>Descent and approach progressively reduce the aircraft&#x27;s altitude and available time for recovery. Workload increases as the crew configures the aircraft, communicates with air traffic control, manages navigation and evaluates weather, runway conditions and traffic.</p><p>A major safety concept is the stabilized approach. The aircraft should meet defined criteria for appropriate speed, configuration, flight path, descent rate and alignment by a specified point. If the approach becomes unstable, the safest response is normally to discontinue it rather than attempt to salvage an increasingly poor trajectory.</p><p>Terrain clearance becomes more important as altitude decreases. Navigation accuracy, published procedures and appropriate minimum altitudes provide barriers against controlled flight into terrain. Distraction, expectation and unfamiliar terrain can weaken those barriers.</p><p>Weather can significantly change approach risk. Crosswind, gusts, turbulence, low visibility, heavy rain and wind shear can affect energy management and flight-path control. The crew must compare actual conditions with aircraft and airport limits.</p><p>Traffic sequencing can create pressure to continue an approach or accept a compressed profile. Safety depends on maintaining operational criteria even when external pressure exists.</p><p>Descent planning also affects fuel and energy. Excessive speed or a high-energy arrival may require aggressive manoeuvring later. Early planning provides more options.</p><p>Approach safety therefore depends on disciplined monitoring rather than merely following a line on a navigation display. The crew must continuously compare aircraft state, flight path, environment and operational limits. If the required margins are not present, changing the plan is a safety action, not a failure.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Descent and Approach Safety">
+<title>Descent and Approach Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 11</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Descent and Approach Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440Q280 260 470 310T800 250T1090 330" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M780 250L850 180L930 245" fill="none" stroke="#ffb24a" stroke-width="8"/>
+<path d="M930 245L1040 330" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">STABILIZED APPROACH · GO-AROUND BARRIER</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s12">
+<div class="section-kicker">SUBJECT 05 · 12</div>
+<h2>Landing Safety</h2>
+<div class="study-matter"><p>Landing is a high-workload, low-altitude phase in which the aircraft must transition from controlled flight to ground movement while maintaining appropriate speed, alignment and energy. The runway provides a limited surface for touchdown and deceleration, so errors have less recovery time than during cruise.</p><p>A safe landing begins with a stable approach. Excess speed increases stopping distance and may cause the aircraft to float. Excessively low speed can reduce the margin above stall. Crosswind can require correction to maintain runway alignment. Gusts and turbulence introduce additional variation.</p><p>Runway surface condition is important because water, snow, ice or rubber contamination can reduce tyre-runway friction. Braking effectiveness and reverse thrust, where fitted, must be considered within the aircraft&#x27;s operating procedures.</p><p>Touchdown location also matters. A long landing reduces the available runway for stopping. If the aircraft is not in a condition to land safely within the required criteria, a go-around is normally the safer option.</p><p>Directional control continues after touchdown. Crosswind, asymmetric braking, steering problems or poor centreline tracking can result in runway excursion.</p><p>Landing safety therefore depends on disciplined energy management, accurate alignment, runway assessment and willingness to reject an unsafe approach. A go-around should be regarded as a normal safety barrier, not as an admission of failure. The safest landing is the one conducted when the aircraft, runway and environment are within acceptable limits.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Landing Safety">
+<title>Landing Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 12</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Landing Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M100 430H1090" stroke="#39444f" stroke-width="4"/>
+<path d="M160 410L300 375L440 350L580 315L720 290L860 260L1030 240" fill="none" stroke="#7ce7ff" stroke-width="8"/>
+<path d="M160 410L300 400L440 380L580 355L720 345L860 325L1030 315" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<path d="M1030 240L1030 150" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<text x="160" y="500" fill="#cbd3d9" font-family="monospace" font-size="16">TOUCHDOWN → BRAKING → RUNWAY EXIT</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s13">
+<div class="section-kicker">SUBJECT 05 · 13</div>
+<h2>Post-Landing and Shutdown Safety</h2>
+<div class="study-matter"><p>Post-landing operations continue to present safety risks even after the aircraft has stopped flying. The aircraft must transition back into a ground environment containing vehicles, personnel, other aircraft and equipment.</p><p>After touchdown, braking and directional control must be maintained until the aircraft reaches a suitable taxi speed. High brake temperature may become a concern after heavy braking or a rejected take-off. Personnel should not approach affected components until appropriate precautions are followed.</p><p>Shutdown procedures manage engines, auxiliary systems, electrical power and other equipment. Incorrect shutdown can leave hazards such as rotating machinery, hot surfaces or pressurised systems. Ground crews need clear communication about the aircraft&#x27;s status before approaching.</p><p>At the stand, chocks, ground power, passenger boarding equipment, catering vehicles, fuel equipment and baggage vehicles may all operate around the aircraft. Vehicle collision and human exposure to engine or propeller hazards are controlled through designated procedures and exclusion zones.</p><p>The aircraft must also be secured against unintended movement. Environmental conditions such as strong wind can affect doors, ground equipment and loose objects.</p><p>Post-flight records are important from a safety perspective. Defects, abnormal indications, bird strikes, hard landings, turbulence encounters and other occurrences should be recorded and communicated so that maintenance and operational teams can evaluate them.</p><p>A flight is not complete from a safety perspective when the wheels touch the runway. Safe completion includes controlled taxi, secure shutdown, safe disembarkation, correct defect reporting and a properly handed-over aircraft.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Post-Landing and Shutdown Safety">
+<title>Post-Landing and Shutdown Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 13</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Post-Landing and Shutdown Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><rect x="130" y="175" width="380" height="250" rx="25" fill="#101820" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M170 245H470M170 315H430M170 385H390" stroke="#8dffad" stroke-width="9"/>
+<circle cx="800" cy="300" r="125" fill="#111922" stroke="#ffb24a" stroke-width="5"/>
+<path d="M800 300L865 245" stroke="#ffb24a" stroke-width="8" marker-end="url(#a)"/>
+<path d="M800 175V115M800 425V485M675 300H615M925 300H985" stroke="#39444f" stroke-width="4"/>
+<text x="160" y="475" fill="#cbd3d9" font-family="monospace" font-size="16">SECURE · SHUTDOWN · HANDOVER · REPORT</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s14">
+<div class="section-kicker">SUBJECT 05 · 14</div>
+<h2>Aircraft Energy Management</h2>
+<div class="study-matter"><p>Aircraft energy management is the deliberate control of kinetic and potential energy so that the aircraft remains capable of following the intended flight path or recovering from deviations. In practical flight operations, energy is strongly related to speed, altitude, configuration, thrust and flight-path angle.</p><p>An aircraft that is too fast and too high on approach is in a high-energy state. Correcting the situation late may require steep descent, excessive manoeuvring or unstable configuration changes. An aircraft that is too slow and too low has the opposite problem: insufficient energy may leave little opportunity to regain the desired flight path.</p><p>Energy management begins well before the final approach. Descent planning, speed control, configuration changes and thrust management determine whether the aircraft arrives at the approach segment in a controllable state.</p><p>Potential energy is associated with altitude, while kinetic energy is associated with speed. Converting one into the other is a normal part of flight. However, the aircraft cannot freely exchange them without limits because drag, thrust, terrain, structural limitations and stall margins constrain the available options.</p><p>Energy management is particularly important during abnormal operations. Following an engine problem, for example, the aircraft may need to trade altitude for time or distance. During an approach, maintaining appropriate speed may be more important than maintaining an exact altitude momentarily, depending on the aircraft&#x27;s procedures and situation.</p><p>The safety principle is simple: preserve enough energy and manoeuvring margin to retain control and options. Good energy management prevents unstable approaches, reduces excessive control inputs and gives the crew more recovery capability.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Energy Management">
+<title>Aircraft Energy Management</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 14</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Aircraft Energy Management</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 450V150H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M150 410Q320 330 470 360T760 280T1030 300" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M150 410Q320 250 470 290T760 210T1030 240" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<circle cx="760" cy="280" r="16" fill="#ff5a1f"/>
+<text x="165" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">KINETIC + POTENTIAL ENERGY → MANAGEABLE FLIGHT PATH</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s15">
+<div class="section-kicker">SUBJECT 05 · 15</div>
+<h2>Airspeed and Flight Safety</h2>
+<div class="study-matter"><p>Airspeed is one of the primary variables used to control an aircraft&#x27;s energy and aerodynamic condition. Different airspeeds have different meanings and safety implications, and the crew must use the appropriate reference for the aircraft and operating condition.</p><p>At low speed, the aircraft approaches its stall region. Stall is fundamentally related to excessive angle of attack rather than a single numerical speed. The indicated speed at which a stall occurs can vary with aircraft configuration, load factor, mass and other conditions.</p><p>At high speed, structural, aerodynamic and control limitations become important. Excessive speed may increase aerodynamic loads, reduce controllability margins or exceed operating limitations. Turbulence can also create rapid changes in airspeed and load.</p><p>Airspeed indications themselves must be interpreted correctly. Instrument errors, pitot-static problems, icing or sensor failures can produce unreliable indications. Aircraft systems may provide multiple sources of airspeed information, but the crew must recognise discrepancies rather than blindly trusting a single indication.</p><p>During take-off and landing, specific reference speeds are associated with aircraft configuration and performance. These speeds provide operational margins rather than guarantees against every hazard.</p><p>Safe speed management therefore requires understanding the relationship among airspeed, angle of attack, aircraft configuration, mass, altitude and load factor. Speed should never be treated as an isolated number. It is one part of the aircraft&#x27;s overall energy state and must be continuously cross-checked against the phase of flight and applicable limitations.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Airspeed and Flight Safety">
+<title>Airspeed and Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 15</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Airspeed and Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440V150H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M160 400Q310 340 450 350T720 290T1030 315" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M160 400Q310 250 450 245T720 190T1030 230" fill="none" stroke="#ffb24a" stroke-width="6"/>
+<text x="160" y="505" fill="#cbd3d9" font-family="monospace" font-size="16">LOW-SPEED MARGIN ↔ HIGH-SPEED LIMITS</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s16">
+<div class="section-kicker">SUBJECT 05 · 16</div>
+<h2>Altitude, Terrain Clearance and Minimum Safe Altitude</h2>
+<div class="study-matter"><p>Altitude provides separation from terrain, time for decision-making and potential energy that can be converted into airspeed or manoeuvring capability. Minimum safe altitude concepts therefore form an important part of flight safety.</p><p>Terrain clearance requirements vary with the route, aircraft operation, navigation accuracy, obstacle environment and applicable operating procedures. Published minimum altitudes provide structured protection, but safe terrain clearance also depends on correct navigation, accurate position awareness and compliance with the planned procedure.</p><p>Mountainous environments create additional challenges. Terrain may rise rapidly, weather may obscure obstacles and strong winds can alter aircraft performance and flight path. A crew must not rely solely on visual impressions or memory when operating near terrain.</p><p>Controlled flight into terrain can occur even when the aircraft is mechanically capable of flying. Contributing factors may include navigation errors, incorrect altitude selection, poor situational awareness, distraction, fatigue, weather and expectation.</p><p>Altitude is also related to aircraft performance. At high altitude, reduced air density affects engine and aerodynamic performance. An altitude that is operationally safe from terrain may still present performance limitations.</p><p>The safety principle is to maintain both vertical clearance and situational awareness. Altitude indications should be cross-checked with navigation information, published procedures and terrain awareness systems where available. When uncertainty exists, the crew should choose an action that increases margin rather than continuing deeper into a reduced-clearance situation.</p><p>Minimum safe altitude is therefore not merely a number printed on a chart. It is part of a broader terrain-risk management system.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Altitude, Terrain Clearance and Minimum Safe Altitude">
+<title>Altitude, Terrain Clearance and Minimum Safe Altitude</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 16</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Altitude, Terrain Clearance and Minimum Safe Altitude</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M130 450V130M130 450H1080" stroke="#39444f" stroke-width="4"/>
+<path d="M170 420L300 380L430 335L560 290L690 250L820 210L1000 165" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M690 250V115" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M820 210V330" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">ALTITUDE = CLEARANCE + TIME + OPTIONS</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s17">
+<div class="section-kicker">SUBJECT 05 · 17</div>
+<h2>Aircraft Stability and Controllability</h2>
+<div class="study-matter"><p>Aircraft stability describes the tendency of an aircraft to respond to a disturbance in a predictable manner, while controllability concerns the ability of the pilot or flight-control system to produce the desired response. Both are fundamental to flight safety.</p><p>Longitudinal stability concerns pitch behaviour. Directional stability concerns yaw, and lateral stability concerns roll. The aircraft&#x27;s geometry, centre of gravity, control surfaces and aerodynamic characteristics influence these properties.</p><p>An aircraft can be stable but still difficult to control, or highly controllable but less stable. Modern aircraft may use flight-control systems to provide desired handling qualities while maintaining safe aerodynamic characteristics.</p><p>Centre-of-gravity position is particularly important. A forward centre of gravity can increase longitudinal stability but may require greater control force and affect performance. An excessively aft centre of gravity can reduce stability and increase the difficulty of recovering from certain conditions.</p><p>Control authority also depends on airspeed, altitude, configuration and system condition. At low speed, aerodynamic control effectiveness can reduce. A control-surface failure or hydraulic problem may further limit authority.</p><p>Safety depends on maintaining adequate stability and control margins under normal and abnormal conditions. Certification testing, maintenance, flight-control inspections and operational limitations provide multiple barriers.</p><p>Understanding stability and controllability helps explain why configuration changes, mass distribution, speed and system failures can affect safety. The objective is not simply to keep the aircraft pointed in the desired direction but to ensure that the aircraft retains predictable and sufficient response throughout the operating envelope.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Stability and Controllability">
+<title>Aircraft Stability and Controllability</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 17</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Aircraft Stability and Controllability</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="330" cy="310" r="120" fill="#101820" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M210 310H450M330 190V430" stroke="#39444f" stroke-width="3"/>
+<path d="M330 310L410 255" stroke="#ffb24a" stroke-width="8" marker-end="url(#a)"/>
+<path d="M700 230Q850 150 1010 230Q850 310 700 230Z" fill="none" stroke="#ff5a1f" stroke-width="7"/>
+<text x="175" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">STABILITY + CONTROL AUTHORITY + PREDICTABILITY</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s18">
+<div class="section-kicker">SUBJECT 05 · 18</div>
+<h2>Stall and Loss-of-Control Safety</h2>
+<div class="study-matter"><p>A stall occurs when an aircraft&#x27;s wing reaches an angle of attack beyond which airflow separates sufficiently to cause a substantial loss of lift. It is therefore an aerodynamic condition, not simply a particular low-speed number.</p><p>The risk of stall depends on aircraft configuration, load factor, mass, manoeuvre and atmospheric conditions. Increasing load factor increases the angle of attack required to generate the necessary lift, so an aircraft can approach stall at a speed significantly higher than the speed expected in straight and level flight.</p><p>Stall warning systems, aerodynamic cues and pilot training provide barriers. However, a stall can develop rapidly, particularly during turns, manoeuvres, wind shear encounters or inappropriate pitch control.</p><p>Loss of control is a broader event in which the aircraft departs from the intended flight path or attitude and the crew loses effective control. Stall is one pathway to loss of control, but other pathways include extreme pitch or bank, spatial disorientation, automation mismanagement, structural damage and flight-control failures.</p><p>The primary safety principle during an incipient stall is to reduce angle of attack and regain controlled flight according to the aircraft&#x27;s approved procedures. Attempts to preserve altitude at all costs can worsen the condition because maintaining excessive pitch may prevent the wing from recovering.</p><p>Prevention is generally better than recovery. Adequate speed margins, appropriate energy management, correct configuration, recognition of warning signs and disciplined response to unstable situations reduce the probability of entering a stall condition.</p><p>Flight safety therefore treats stall prevention and loss-of-control prevention as central operational priorities.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Stall and Loss-of-Control Safety">
+<title>Stall and Loss-of-Control Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 18</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Stall and Loss-of-Control Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M160 400Q300 350 440 360T720 330T1030 345" fill="none" stroke="#7ce7ff" stroke-width="6"/>
+<path d="M160 400Q300 270 440 250T720 205T1030 250" fill="none" stroke="#ff5a1f" stroke-width="8"/>
+<circle cx="720" cy="330" r="17" fill="#ffb24a"/>
+<text x="620" y="185" fill="#ff5a1f" font-family="monospace" font-size="16">STALL MARGIN</text>
+<text x="160" y="500" fill="#cbd3d9" font-family="monospace" font-size="16">ANGLE OF ATTACK → LIFT → CONTROL</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s19">
+<div class="section-kicker">SUBJECT 05 · 19</div>
+<h2>Aircraft Upsets and Spin Prevention</h2>
+<div class="study-matter"><p>An aircraft upset is a significant deviation from the intended attitude, airspeed, flight path or energy state. Upsets may involve excessive pitch, bank, speed or combinations of these conditions. If not corrected, an upset can progress into loss of control.</p><p>Upsets can originate from turbulence, wind shear, system failures, incorrect control inputs, automation mode confusion, spatial disorientation or inappropriate responses to an abnormal event. They may occur unexpectedly, which makes recognition and recovery capability essential.</p><p>Spin prevention begins with understanding the relationship between stall and yaw. If an aircraft stalls while experiencing significant yaw or asymmetric conditions, one wing may be more deeply stalled than the other, producing autorotation. Aircraft design and training are intended to prevent inadvertent entry into unrecoverable or difficult flight conditions.</p><p>Recovery philosophy emphasises returning the aircraft to a controllable attitude rather than immediately attempting to restore the previous altitude or flight path. Excessive control inputs can worsen an upset, particularly at high speed where structural loads may become significant.</p><p>Automation can either reduce or contribute to upset risk. Automated systems can maintain stable flight but may also create mode-awareness challenges if the crew does not understand the system&#x27;s current behaviour.</p><p>Effective upset prevention combines stable energy management, accurate attitude awareness, appropriate automation use, weather avoidance and crew training. Recovery training develops the ability to recognise abnormal attitudes and apply disciplined control inputs before the situation becomes unrecoverable.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Upsets and Spin Prevention">
+<title>Aircraft Upsets and Spin Prevention</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 19</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Aircraft Upsets and Spin Prevention</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M140 430Q280 250 450 330T720 245T1050 320" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M520 295C590 220 660 220 730 295C660 370 590 370 520 295Z" fill="none" stroke="#ff5a1f" stroke-width="8"/>
+<path d="M625 295V155" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<text x="170" y="500" fill="#cbd3d9" font-family="monospace" font-size="16">UPSET → RECOGNIZE → CONTROL → RECOVER</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s20">
+<div class="section-kicker">SUBJECT 05 · 20</div>
+<h2>Manoeuvring and Structural Load Safety</h2>
+<div class="study-matter"><p>Aircraft structures are designed to withstand expected aerodynamic, landing, pressurisation and manoeuvring loads with appropriate safety margins. Flight safety requires operating within those limits and recognising conditions that can produce abnormal loading.</p><p>Load factor describes the ratio between the aerodynamic force supporting the aircraft and its weight. In manoeuvres, turns and turbulence, load factor can increase significantly. A structurally acceptable aircraft can therefore experience much higher loads than in straight-and-level flight.</p><p>Speed is another important variable. At high speed, aerodynamic forces increase and structural loads can rise rapidly. Turbulence can impose abrupt load changes, while aggressive control inputs can produce additional stress.</p><p>Repeated loading also matters. Structures can experience fatigue damage even when individual loads are below the ultimate strength of the material. This is why inspection programs, life limits and structural monitoring are essential.</p><p>The safety objective is not simply to avoid catastrophic structural failure. Excessive loads can also cause permanent deformation, damage control surfaces or alter aircraft handling.</p><p>Pilots must respect operating limitations and avoid unnecessary manoeuvres that reduce structural margin. Maintenance personnel must inspect known load-sensitive areas and correctly record events such as severe turbulence encounters, hard landings or exceedances.</p><p>From an engineering perspective, structural safety is maintained through design, testing, certification, operational limitations, inspection and maintenance. These layers ensure that the aircraft remains capable of carrying expected loads throughout its service life.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Manoeuvring and Structural Load Safety">
+<title>Manoeuvring and Structural Load Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 20</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Manoeuvring and Structural Load Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440H1090" stroke="#39444f" stroke-width="4"/>
+<path d="M150 410L290 370L430 340L570 290L710 250L850 205L1030 165" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M150 420L290 395L430 370L570 345L710 325L850 300L1030 280" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<path d="M710 250L780 120" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">LOAD FACTOR · MANOEUVRE · STRUCTURAL MARGIN</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s21">
+<div class="section-kicker">SUBJECT 05 · 21</div>
+<h2>Weather and Flight Safety</h2>
+<div class="study-matter"><p>Weather is one of the most significant external variables affecting flight safety. Atmospheric conditions can alter aircraft performance, visibility, runway condition, flight path, structural loading and human workload.</p><p>Weather hazards include thunderstorms, turbulence, wind shear, icing, heavy precipitation, lightning, reduced visibility, strong winds, extreme temperatures and volcanic ash. Their significance depends on aircraft type, altitude, location and phase of flight.</p><p>Weather information must therefore be interpreted operationally. A forecast is not simply a description of the atmosphere; it is an input to decisions about routing, fuel, altitude, runway selection and alternates. Conditions can change after departure, so weather assessment continues throughout the flight.</p><p>Thunderstorms deserve particular attention because they may contain severe turbulence, icing, hail, lightning, strong vertical currents and wind shear. Attempting to penetrate a severe convective cell is generally inappropriate when safe avoidance is available.</p><p>Wind affects take-off and landing performance and can create crosswind or tailwind components. Rapid wind changes are particularly hazardous near the ground.</p><p>Weather safety also depends on communication between flight crew and air traffic services, dispatch personnel and other crews. Reports from aircraft can provide valuable real-time information.</p><p>The central principle is margin management. When weather reduces the available margin, the safe response may be to alter altitude, route, speed, runway or destination. A flight plan should be treated as adaptable rather than something that must be followed despite deteriorating conditions.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Weather and Flight Safety">
+<title>Weather and Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 21</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Weather and Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M100 440Q230 190 410 315T720 245T1090 310" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M250 120L310 230M500 105L560 225M790 120L850 235" stroke="#ff5a1f" stroke-width="12" marker-end="url(#r)"/>
+<circle cx="650" cy="280" r="55" fill="none" stroke="#ffb24a" stroke-width="5"/>
+<path d="M595 280H705M650 225V335" stroke="#ffb24a" stroke-width="4"/>
+<text x="150" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">WEATHER AS A DYNAMIC FLIGHT-SAFETY INPUT</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s22">
+<div class="section-kicker">SUBJECT 05 · 22</div>
+<h2>Turbulence, Wind Shear and Adverse Wind</h2>
+<div class="study-matter"><p>Turbulence is irregular atmospheric motion that causes variations in aircraft acceleration, attitude and airspeed. Most turbulence is uncomfortable rather than structurally dangerous, but severe encounters can injure occupants and impose significant loads.</p><p>Wind shear is a change in wind speed and/or direction over a relatively short distance. Near the ground, strong wind shear can rapidly alter the aircraft&#x27;s energy state during take-off or landing. Microbursts and downbursts are particularly important because they can produce a rapid sequence of performance-degrading wind changes.</p><p>Adverse wind affects runway operations and flight-path control. Crosswind requires appropriate directional control, while tailwind increases groundspeed and can increase take-off or landing distance.</p><p>Safety begins with detection and avoidance. Weather radar, airport wind-shear alerting systems, meteorological reports, pilot reports and visual cues may provide warning. However, detection systems have limitations, and crews must understand the conditions in which avoidance is preferable to continued penetration.</p><p>During turbulence, the crew should follow the aircraft&#x27;s turbulence procedures, maintain appropriate control and avoid unnecessary manoeuvring. Occupant restraint is an important injury-prevention barrier.</p><p>Wind-shear recovery procedures are aircraft-specific and are designed to prioritise escape from the hazardous air mass. The general principle is to follow the approved procedure promptly rather than improvising.</p><p>The key safety lesson is that wind is not simply a navigation variable. Rapid changes in wind can change the aircraft&#x27;s energy and flight path faster than the crew can visually perceive. Early recognition and conservative margins are therefore critical.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Turbulence, Wind Shear and Adverse Wind">
+<title>Turbulence, Wind Shear and Adverse Wind</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 22</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Turbulence, Wind Shear and Adverse Wind</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440H1090" stroke="#39444f" stroke-width="3"/>
+<path d="M150 405Q310 335 460 355T760 295T1030 320" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M280 145L350 250M530 115L600 245M820 135L890 250" stroke="#ff5a1f" stroke-width="11" marker-end="url(#r)"/>
+<path d="M650 295L730 225L810 280" fill="none" stroke="#ffb24a" stroke-width="8"/>
+<text x="155" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">TURBULENCE · WINDSHEAR · ICING · WIND</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s23">
+<div class="section-kicker">SUBJECT 05 · 23</div>
+<h2>Icing, Contamination and Atmospheric Hazards</h2>
+<div class="study-matter"><p>Icing occurs when supercooled water droplets freeze on aircraft surfaces. Ice can alter wing shape, increase drag, reduce lift, affect control surfaces and change engine or propeller performance. Even small amounts of contamination can have significant aerodynamic consequences on susceptible aircraft.</p><p>Ground contamination is also important. Snow, frost, slush or ice on lifting surfaces can disrupt airflow before take-off. Aircraft operating procedures therefore require contamination checks and appropriate de-icing or anti-icing measures when necessary.</p><p>Atmospheric icing is strongly influenced by temperature, moisture and cloud structure. Crews use forecasts, weather reports, aircraft systems and observed conditions to assess exposure.</p><p>Other atmospheric hazards include volcanic ash, which can damage engines and contaminate aircraft systems, and heavy precipitation, which can reduce visibility and affect engine or aerodynamic performance.</p><p>Safety measures include aircraft certification for specific icing environments, ice-detection systems, anti-ice equipment, de-icing fluids and operational avoidance. These controls must be used correctly because anti-icing systems themselves have limitations and may consume engine or electrical resources.</p><p>The safety principle is to treat contamination as a performance problem rather than merely a cosmetic issue. If the aircraft&#x27;s aerodynamic surface is altered, assumptions about lift, drag, stall margin and control response may no longer be valid.</p><p>Effective contamination management therefore combines environmental awareness, correct inspection, approved treatment, system operation and conservative operational decision-making.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Icing, Contamination and Atmospheric Hazards">
+<title>Icing, Contamination and Atmospheric Hazards</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 23</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Icing, Contamination and Atmospheric Hazards</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440H1090" stroke="#39444f" stroke-width="3"/>
+<path d="M150 405Q310 340 460 360T760 300T1040 325" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M300 355L380 270L455 330" fill="none" stroke="#ffb24a" stroke-width="9"/>
+<circle cx="700" cy="300" r="55" fill="none" stroke="#ff5a1f" stroke-width="7"/>
+<path d="M670 300H730M700 270V330" stroke="#ff5a1f" stroke-width="4"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">CONTAMINATION → PERFORMANCE CHANGE → CONTROL</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s24">
+<div class="section-kicker">SUBJECT 05 · 24</div>
+<h2>Visibility and Instrument Meteorological Conditions</h2>
+<div class="study-matter"><p>Visibility determines how effectively pilots can use external visual references and is a major factor in approach, landing, terrain avoidance and ground operations. Instrument meteorological conditions occur when visibility or cloud conditions prevent operation under the applicable visual criteria.</p><p>Reduced visibility can result from fog, mist, heavy rain, dust, smoke, snow or other atmospheric conditions. The hazard is not simply that the pilot cannot see; reduced external cues can increase dependence on instruments, navigation systems and procedures.</p><p>Instrument flight therefore requires accurate interpretation of attitude, altitude, airspeed, heading and navigation information. Spatial disorientation can occur when the brain receives misleading vestibular cues, particularly during prolonged turns or acceleration without reliable visual references.</p><p>Runway visibility is also important during approach and landing. The crew must determine whether the reported conditions satisfy the applicable approach and landing requirements. If visual references are not acquired as required, the approach may need to be discontinued.</p><p>Night operations can produce similar challenges even when meteorological visibility is technically adequate. Terrain, lighting, featureless areas and visual illusions may reduce the quality of external cues.</p><p>Safety depends on disciplined instrument cross-checking, reliable navigation, appropriate approach procedures and strict adherence to operational minima. A pilot should not continue an approach simply because the runway is expected to appear.</p><p>The key principle is that visibility changes the information available to the crew. When visual information becomes unreliable, the flight must be managed using the appropriate instrument procedures and margins rather than human expectation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Visibility and Instrument Meteorological Conditions">
+<title>Visibility and Instrument Meteorological Conditions</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 24</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Visibility and Instrument Meteorological Conditions</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><rect x="130" y="160" width="400" height="290" rx="25" fill="#101820" stroke="#7ce7ff" stroke-width="4"/>
+<path d="M175 405V220M250 405V260M325 405V190M400 405V240M475 405V210" stroke="#8dffad" stroke-width="22"/>
+<circle cx="820" cy="300" r="120" fill="#111922" stroke="#ffb24a" stroke-width="5"/>
+<path d="M820 300L880 245" stroke="#ffb24a" stroke-width="8" marker-end="url(#a)"/>
+<path d="M700 300H650M940 300H990M820 180V130M820 420V470" stroke="#39444f" stroke-width="4"/>
+<text x="160" y="505" fill="#cbd3d9" font-family="monospace" font-size="16">VISUAL CUES ↔ INSTRUMENT CUES</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s25">
+<div class="section-kicker">SUBJECT 05 · 25</div>
+<h2>Propulsion Reliability and Engine Safety</h2>
+<div class="study-matter"><p>Propulsion reliability is fundamental because engines provide the thrust required to maintain or change aircraft energy. Modern aircraft are designed so that specified engine failures can be managed without immediate loss of the aircraft, but the safety consequences depend strongly on the phase of flight.</p><p>Engine safety begins with design, certification, inspection and maintenance. Critical rotating components, fuel systems, lubrication systems, control systems and temperature management require strict engineering controls.</p><p>During operation, abnormal indications may include unusual temperature, pressure, vibration, speed or fuel-flow behaviour. Trend monitoring can identify deterioration before a major failure occurs. Crews are trained to recognise these indications and apply aircraft-specific procedures.</p><p>An engine fire is a particularly serious condition because fire can damage systems and structure. Fire detection and extinguishing systems provide barriers, while fuel isolation procedures help remove the source.</p><p>Engine failure after take-off is especially demanding because altitude and time are limited. In cruise, the same failure may permit a controlled diversion. This illustrates why propulsion safety cannot be assessed independently of flight phase.</p><p>Maintenance errors can also affect propulsion reliability. Incorrect installation, foreign-object damage, contamination or inadequate inspection can create latent failures.</p><p>The overall safety system therefore includes engine design, redundancy where applicable, monitoring, maintenance, fire protection, crew procedures and emergency planning. Reliability is not the expectation that an engine will never fail; it is the ability of the aircraft system to tolerate, detect and manage credible failures while maintaining acceptable safety.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Propulsion Reliability and Engine Safety">
+<title>Propulsion Reliability and Engine Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 25</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Propulsion Reliability and Engine Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M100 440H1090" stroke="#39444f" stroke-width="3"/>
+<path d="M150 400L280 350L410 295L540 255L670 300L800 220L940 260L1040 170" fill="none" stroke="#ffb24a" stroke-width="8"/>
+<path d="M670 300V130" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<circle cx="670" cy="300" r="18" fill="#ff5a1f"/>
+<text x="150" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">THRUST · TEMPERATURE · VIBRATION · FIRE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s26">
+<div class="section-kicker">SUBJECT 05 · 26</div>
+<h2>Fuel Management and Fuel Safety</h2>
+<div class="study-matter"><p>Fuel management is the process of ensuring that the aircraft has the required quantity and quality of fuel, correctly distributed, monitored and available for the intended operation and foreseeable contingencies.</p><p>Fuel quantity must account for the planned route, expected consumption, taxiing, weather, delays, holding, diversion and required reserves. The exact requirements depend on the aircraft and operating rules, but the underlying safety principle is the same: sufficient fuel must remain for realistic uncertainty.</p><p>Fuel imbalance can affect aircraft handling and structural loading. Fuel transfer systems must therefore be monitored, particularly in aircraft with multiple tanks.</p><p>Fuel quality is also important. Water, contamination or incorrect fuel type can impair engine operation. Sampling, storage controls and maintenance procedures reduce these risks.</p><p>Fuel leaks represent both a loss-of-resource problem and a fire hazard. Unusual fuel-flow indications, quantity discrepancies or odour may require investigation.</p><p>Fuel management is also vulnerable to human error. Incorrect unit conversion, transcription, assumptions about consumption or failure to update the fuel plan can create large discrepancies. Independent cross-checking and clear procedures reduce these risks.</p><p>The safest approach is to treat fuel as a continuously changing safety margin rather than a number checked once before departure. The crew should know the expected remaining quantity, compare it with actual consumption and establish clear decision points for diversion or other action before the situation becomes critical.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Fuel Management and Fuel Safety">
+<title>Fuel Management and Fuel Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 26</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Fuel Management and Fuel Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440H1080" stroke="#39444f" stroke-width="3"/>
+<rect x="260" y="215" width="180" height="110" rx="20" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="310" y="280" fill="#ffb24a" font-family="monospace" font-size="18">FUEL</text>
+<path d="M440 270H620" stroke="#ffb24a" stroke-width="7" marker-end="url(#a)"/>
+<circle cx="760" cy="320" r="75" fill="#111922" stroke="#ff5a1f" stroke-width="6"/><text x="715" y="327" fill="#ff5a1f" font-family="monospace" font-size="18">ENGINE</text>
+<path d="M760 245V145" stroke="#ff5a1f" stroke-width="5" marker-end="url(#r)"/>
+<text x="155" y="500" fill="#cbd3d9" font-family="monospace" font-size="16">QUANTITY · QUALITY · BALANCE · RESERVE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s27">
+<div class="section-kicker">SUBJECT 05 · 27</div>
+<h2>Flight-Control System Safety</h2>
+<div class="study-matter"><p>Flight-control systems translate pilot or automatic commands into changes in aircraft attitude and flight path. They may use mechanical linkages, cables, hydraulic actuators, electrical signalling, digital computers or combinations of these technologies.</p><p>Because flight controls are safety-critical, aircraft are designed with specific requirements for reliability, redundancy, failure detection and continued safe operation following defined failures. The architecture varies considerably among aircraft.</p><p>Control surfaces such as ailerons, elevators and rudders provide aerodynamic control. Secondary surfaces such as flaps and spoilers influence lift, drag and handling characteristics. A failure may affect only one function or may interact with other systems.</p><p>Control-system safety includes both hardware and software. A mechanically sound actuator is not sufficient if the command logic is incorrect, and a correct computer command is not useful if the actuator cannot respond.</p><p>Flight crews must understand the aircraft&#x27;s abnormal procedures for control anomalies. A jammed, runaway or asymmetric surface can produce significant workload and may require a different control strategy.</p><p>Maintenance inspections are equally important. Incorrect rigging, leaks, damaged cables, actuator defects or electrical faults can reduce control capability.</p><p>The fundamental safety requirement is preservation of controllability. System design, redundancy, monitoring, maintenance and crew procedures must combine so that credible failures do not result in an immediate uncontrolled condition.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Flight-Control System Safety">
+<title>Flight-Control System Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 27</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Flight-Control System Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><g transform="translate(110 145)">
+<path d="M0 260H200" stroke="#7ce7ff" stroke-width="10" marker-end="url(#b)"/>
+<rect x="200" y="170" width="190" height="180" rx="22" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="255" y="270" fill="#ffb24a" font-family="monospace" font-size="18">CONTROL</text>
+<path d="M390 260H560" stroke="#7ce7ff" stroke-width="10" marker-end="url(#b)"/>
+<rect x="560" y="170" width="190" height="180" rx="22" fill="#111922" stroke="#ff5a1f" stroke-width="5"/><text x="600" y="270" fill="#ff5a1f" font-family="monospace" font-size="18">SURFACE</text>
+<path d="M750 260H900" stroke="#8dffad" stroke-width="8" marker-end="url(#b)"/>
+<text x="10" y="410" fill="#cbd3d9" font-family="monospace" font-size="16">COMMAND → ACTUATION → AIRCRAFT RESPONSE</text>
+</g></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s28">
+<div class="section-kicker">SUBJECT 05 · 28</div>
+<h2>Electrical, Hydraulic and Pneumatic System Safety</h2>
+<div class="study-matter"><p>Electrical, hydraulic and pneumatic systems provide energy for many aircraft functions, including flight controls, landing gear, brakes, environmental control, engine systems, lighting and avionics. Their failure can therefore have consequences far beyond the individual component.</p><p>Electrical safety involves generators, batteries, distribution buses, wiring, protection devices and power-management systems. Short circuits, insulation damage, overloads or incorrect maintenance can create both loss-of-function and fire hazards.</p><p>Hydraulic systems use pressurised fluid to transmit power. Leaks, contamination, pump failure or loss of reservoir quantity can reduce system capability. Because hydraulic fluid is stored under pressure, maintenance also requires control of stored energy and appropriate personal protection.</p><p>Pneumatic systems use compressed air, often derived from engines or dedicated sources. They support functions such as pressurisation and environmental control. Excessive temperature, pressure or duct failure can create hazards.</p><p>Modern aircraft often provide redundancy so that a single system failure does not eliminate all essential functions. However, common-cause failures must also be considered. Independent systems are only genuinely protective when they are sufficiently independent.</p><p>Operational safety depends on monitoring system indications, recognising abnormal trends and applying aircraft-specific procedures. Maintenance safety requires depressurisation, isolation and verification before work begins.</p><p>The central concept is energy management. Electrical current, hydraulic pressure and pneumatic pressure are useful forms of stored energy, but they can also create injury, fire or equipment hazards when uncontrolled.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Electrical, Hydraulic and Pneumatic System Safety">
+<title>Electrical, Hydraulic and Pneumatic System Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 28</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Electrical, Hydraulic and Pneumatic System Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M170 400L290 345L410 365L530 300L650 325L770 250L900 275L1030 190" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<path d="M530 300V160M770 250V110" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<circle cx="900" cy="275" r="18" fill="#ff5a1f"/>
+<text x="150" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">ELECTRICAL · HYDRAULIC · PNEUMATIC ENERGY</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s29">
+<div class="section-kicker">SUBJECT 05 · 29</div>
+<h2>Avionics, Navigation and Communication Safety</h2>
+<div class="study-matter"><p>Avionics, navigation and communication systems provide the information and connectivity needed to maintain safe separation, route the aircraft and manage flight. Their failure can reduce situational awareness even when the aircraft remains mechanically controllable.</p><p>Navigation systems may combine satellite navigation, inertial systems, radio navigation and other sensors. Cross-checking different sources can help detect errors. A navigation display should not be treated as infallible; sensor failures, database issues, signal interference or incorrect selections can produce misleading information.</p><p>Communication systems allow coordination with air traffic services and other aircraft. Loss of communication requires established procedures rather than improvisation. Clear understanding of the aircraft&#x27;s position, route and applicable communication-failure procedures is essential.</p><p>Avionics also include flight-management and display systems. The increasing integration of these systems creates major benefits but can increase complexity. Incorrect data entry, mode selection or interpretation may create hazards even when the hardware functions correctly.</p><p>Cybersecurity and data integrity are increasingly relevant to aviation safety because navigation, communication and information systems are interconnected. Protection of software and data is therefore part of system assurance.</p><p>Redundancy, monitoring, independent cross-checks and validated databases form important barriers. Maintenance must ensure correct configuration and software status.</p><p>The safety principle is that information itself is a safety-critical resource. A pilot can only make good decisions if the information presented is accurate, relevant and understood. Flight safety therefore requires both reliable equipment and disciplined human interpretation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Avionics, Navigation and Communication Safety">
+<title>Avionics, Navigation and Communication Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 29</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Avionics, Navigation and Communication Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="200" cy="310" r="80" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="160" y="317" fill="#7ce7ff" font-family="monospace" font-size="16">SENSOR</text>
+<path d="M280 310H400" stroke="#7ce7ff" stroke-width="6" marker-end="url(#b)"/>
+<circle cx="480" cy="310" r="80" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="450" y="317" fill="#ffb24a" font-family="monospace" font-size="16">DATA</text>
+<path d="M560 310H680" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<circle cx="760" cy="310" r="80" fill="#111922" stroke="#ff5a1f" stroke-width="5"/><text x="715" y="317" fill="#ff5a1f" font-family="monospace" font-size="16">DECISION</text>
+<path d="M480 230V150M480 390V470" stroke="#8dffad" stroke-width="5" marker-end="url(#b)"/>
+<text x="260" y="525" fill="#cbd3d9" font-family="monospace" font-size="16">INFORMATION IS A SAFETY-CRITICAL RESOURCE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s30">
+<div class="section-kicker">SUBJECT 05 · 30</div>
+<h2>Human Factors in Flight Safety</h2>
+<div class="study-matter"><p>Human factors examines how human capabilities and limitations interact with aircraft, procedures, technology and the operating environment. Human error is not simply a personal failing; it is often influenced by workload, fatigue, design, communication, training and organisational conditions.</p><p>Important factors include attention, perception, memory, decision-making, situational awareness and stress. A pilot may know the correct procedure but still fail to perform it when workload becomes excessive or information is ambiguous.</p><p>Fatigue can reduce reaction time, attention and decision quality. Time pressure can encourage shortcuts. Poor cockpit design can increase the likelihood of selecting the wrong control. Ambiguous procedures can produce inconsistent interpretation.</p><p>Situational awareness is especially important. A crew must understand what the aircraft is doing, why it is doing it and what is likely to happen next. Loss of situational awareness can precede navigation errors, unstable approaches and loss of control.</p><p>Human-factors engineering therefore attempts to design systems that support human performance. Clear displays, intuitive controls, effective alarms, standard procedures and useful checklists reduce unnecessary cognitive demand.</p><p>Error management is also important. A mature safety system assumes that people will occasionally make mistakes and provides opportunities to detect and correct them before harm occurs.</p><p>The objective is not to create a perfect human. It is to create an operating system in which human strengths are supported, limitations are recognised and predictable errors are contained by design and teamwork.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Human Factors in Flight Safety">
+<title>Human Factors in Flight Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 30</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Human Factors in Flight Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="350" cy="310" r="105" fill="#111922" stroke="#7ce7ff" stroke-width="5"/>
+<path d="M350 205V125M350 415V495M245 310H165M455 310H535" stroke="#7ce7ff" stroke-width="5" marker-end="url(#b)"/>
+<circle cx="850" cy="310" r="105" fill="#111922" stroke="#ffb24a" stroke-width="5"/>
+<path d="M850 205V125M850 415V495M745 310H665M955 310H1035" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<path d="M455 310H745" stroke="#8dffad" stroke-width="7" marker-end="url(#b)"/>
+<text x="220" y="540" fill="#cbd3d9" font-family="monospace" font-size="16">HUMAN CAPABILITY ↔ SYSTEM DESIGN</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s31">
+<div class="section-kicker">SUBJECT 05 · 31</div>
+<h2>Crew Resource Management</h2>
+<div class="study-matter"><p>Crew Resource Management, or CRM, is the structured use of all available human, technical and informational resources to conduct a flight safely. It developed partly from recognition that many accidents involved communication, coordination or decision-making failures rather than a lack of basic flying skill.</p><p>CRM includes communication, leadership, followership, workload management, situational awareness, decision-making and conflict management. The goal is not simply to encourage friendly teamwork. It is to ensure that safety-critical information reaches the person who needs it and that decisions are appropriately challenged and verified.</p><p>Effective communication should be clear, concise and closed-loop when necessary. Critical instructions should be acknowledged and understood. Crew members should feel able to raise concerns when they believe a safety margin is deteriorating.</p><p>Workload management involves distributing tasks according to the situation. During an abnormal event, one crew member may focus primarily on aircraft control while another manages communications and procedures.</p><p>Authority gradients can create risk when junior personnel hesitate to challenge a senior decision. CRM seeks to create a professional environment in which evidence-based safety concerns can be raised regardless of rank.</p><p>CRM also applies beyond the cockpit. Pilots interact with air traffic controllers, dispatchers, cabin crew, maintenance personnel and ground teams. Safety depends on the quality of these interfaces.</p><p>The fundamental principle is that a technically capable crew can still become unsafe if coordination breaks down. CRM provides a set of behaviours and practices that convert individual competence into reliable team performance.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Crew Resource Management">
+<title>Crew Resource Management</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 31</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Crew Resource Management</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="180" cy="320" r="55" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="147" y="327" fill="#7ce7ff" font-family="monospace" font-size="14">CAPTAIN</text>
+<circle cx="500" cy="180" r="55" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="467" y="187" fill="#ffb24a" font-family="monospace" font-size="14">CREW</text>
+<circle cx="500" cy="460" r="55" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="465" y="467" fill="#ffb24a" font-family="monospace" font-size="14">ATC</text>
+<circle cx="850" cy="320" r="70" fill="#111922" stroke="#8dffad" stroke-width="6"/><text x="815" y="327" fill="#8dffad" font-family="monospace" font-size="15">SAFE DECISION</text>
+<path d="M235 300L445 205M235 340L445 435M555 180L780 300M555 460L780 340" stroke="#7c8790" stroke-width="4" marker-end="url(#b)"/>
+<text x="250" y="555" fill="#cbd3d9" font-family="monospace" font-size="16">COMMUNICATE · CROSS-CHECK · CHALLENGE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s32">
+<div class="section-kicker">SUBJECT 05 · 32</div>
+<h2>Automation and Flight-Deck Safety</h2>
+<div class="study-matter"><p>Automation improves flight safety by performing repetitive tasks, maintaining precise control and reducing workload. It can also introduce new hazards when the crew misunderstands its modes, capabilities or limitations.</p><p>Flight-management systems, autopilots, autothrust systems and automatic protections can manage complex tasks with high consistency. However, automation does not remove the need for human supervision. The crew remains responsible for understanding what the aircraft is doing and whether that behaviour is appropriate.</p><p>Mode awareness is therefore critical. A system may execute a command correctly even when the crew entered an unintended mode. The problem is then not a hardware failure but a mismatch between human expectation and system behaviour.</p><p>Automation can also change workload distribution. Highly automated flight may reduce routine workload but leave fewer opportunities for manual skill practice. A sudden transition from automation to manual control can therefore create a high workload at an unfavourable moment.</p><p>Effective automation management requires appropriate use, active monitoring and timely intervention. Crews should understand when automation should be used, when it should be reduced and how the aircraft behaves when automation is degraded or unavailable.</p><p>Training should include both normal automation and abnormal mode-management scenarios.</p><p>The safety principle is simple: automation is a tool, not an independent safety authority. The best results occur when the human and automated system have clearly defined roles and the crew maintains sufficient awareness to detect when those roles are no longer producing the intended flight path.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Automation and Flight-Deck Safety">
+<title>Automation and Flight-Deck Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 32</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Automation and Flight-Deck Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 440H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M150 400L300 350L450 365L600 290L750 330L900 250L1040 280" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<circle cx="600" cy="290" r="25" fill="#ff5a1f"/>
+<path d="M600 290V160" stroke="#ff5a1f" stroke-width="6" marker-end="url(#r)"/>
+<rect x="260" y="165" width="170" height="70" rx="18" fill="#111922" stroke="#ffb24a" stroke-width="4"/><text x="310" y="210" fill="#ffb24a" font-family="monospace" font-size="16">AUTOMATION</text>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">MODE AWARENESS · MONITORING · APPROPRIATE USE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s33">
+<div class="section-kicker">SUBJECT 05 · 33</div>
+<h2>Emergency Procedures and Abnormal Operations</h2>
+<div class="study-matter"><p>Abnormal operations are situations in which the aircraft or its operating environment departs from normal conditions but remains potentially controllable. Emergency operations involve more serious conditions requiring immediate action to protect life or aircraft.</p><p>Examples include engine malfunction, smoke or fire, pressurisation problems, flight-control abnormalities, electrical failures, navigation failures, severe weather encounters and medical emergencies. The exact response is aircraft-specific and must follow approved procedures.</p><p>A key principle is prioritisation. The crew must first maintain control of the aircraft, then manage the abnormal condition, communicate and complete the appropriate actions. Under high workload, attempting too many tasks simultaneously can increase risk.</p><p>Checklists provide structured memory support and reduce the probability of omitted actions. They are especially valuable when stress affects working memory.</p><p>Emergency decisions also involve choosing between continuing, diverting, returning or landing at a suitable location. The best decision depends on the aircraft state, weather, terrain, fuel, runway characteristics and available support.</p><p>Abnormal procedures are designed around known failure modes and tested assumptions. Crews must avoid inventing procedures when an approved response exists.</p><p>Training and simulation are important because emergencies are infrequent in real life but require rapid, disciplined performance when they occur.</p><p>The safety objective is not to eliminate every abnormal condition. It is to ensure that credible failures trigger a predictable chain of detection, diagnosis, control, communication and recovery rather than uncontrolled escalation.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Emergency Procedures and Abnormal Operations">
+<title>Emergency Procedures and Abnormal Operations</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 33</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Emergency Procedures and Abnormal Operations</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M110 440H1090" stroke="#39444f" stroke-width="3"/>
+<path d="M150 405Q310 330 470 350T760 295T1040 315" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<circle cx="500" cy="350" r="60" fill="#111922" stroke="#ff5a1f" stroke-width="7"/>
+<text x="465" y="357" fill="#ff5a1f" font-family="monospace" font-size="16">ABN</text>
+<path d="M560 350H720" stroke="#ffb24a" stroke-width="7" marker-end="url(#a)"/>
+<rect x="720" y="265" width="260" height="170" rx="25" fill="#111922" stroke="#8dffad" stroke-width="5"/>
+<text x="790" y="360" fill="#8dffad" font-family="monospace" font-size="18">STABILIZE</text>
+<text x="155" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">CONTROL → DIAGNOSE → COMMUNICATE → RECOVER</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s34">
+<div class="section-kicker">SUBJECT 05 · 34</div>
+<h2>Aircraft Fire, Evacuation and Emergency Safety</h2>
+<div class="study-matter"><p>Aircraft fire safety is concerned with preventing ignition, detecting fire rapidly, controlling the source and protecting occupants. Aviation fires are particularly serious because combustible fuel, electrical energy, hydraulic fluids, hot surfaces and confined spaces may exist close together.</p><p>Fire prevention begins with design. Fuel systems, electrical wiring, engine compartments and hot components are arranged and protected to reduce ignition probability and fire propagation. Materials and fire-resistant structures can provide additional time for detection and response.</p><p>Fire detection systems monitor designated areas for abnormal temperature, smoke or other indicators. Rapid detection is important because a fire can damage critical systems quickly.</p><p>Fire extinguishing systems provide another barrier. Their effectiveness depends on correct activation and on isolating the fuel or energy source where applicable.</p><p>Cabin fire safety focuses on smoke detection, fire extinguishers, passenger briefing, cabin-crew response and evacuation. Smoke can become a greater immediate threat than flames because it reduces visibility and can contain toxic products.</p><p>Evacuation is a time-critical process. Exit availability, lighting, crowd behaviour, crew commands and aircraft attitude all influence the outcome. Emergency exits and evacuation systems are therefore designed and maintained as life-safety equipment.</p><p>Post-incident response also matters. Fire events require accurate reporting, inspection and maintenance before the aircraft returns to service.</p><p>The central principle is layered protection: prevent ignition, detect quickly, contain the fire, suppress it, protect occupants and provide a rapid escape path if containment is unsuccessful.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Aircraft Fire, Evacuation and Emergency Safety">
+<title>Aircraft Fire, Evacuation and Emergency Safety</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 34</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Aircraft Fire, Evacuation and Emergency Safety</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M100 440H1090" stroke="#39444f" stroke-width="3"/>
+<path d="M160 400Q310 330 450 350T700 300T1040 325" fill="none" stroke="#7ce7ff" stroke-width="7"/>
+<circle cx="520" cy="340" r="70" fill="#111922" stroke="#ff5a1f" stroke-width="7"/>
+<path d="M520 270V225M520 410V455M450 340H405M590 340H635" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<path d="M635 340H900" stroke="#ffb24a" stroke-width="7" marker-end="url(#a)"/>
+<text x="675" y="310" fill="#ffb24a" font-family="monospace" font-size="16">PROTECT · EXTINGUISH · EVACUATE</text>
+<text x="155" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">FIRE → CONTAINMENT → LIFE SAFETY</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s35">
+<div class="section-kicker">SUBJECT 05 · 35</div>
+<h2>Accident Prevention, Safety Barriers and Recovery</h2>
+<div class="study-matter"><p>Accident prevention is the deliberate reduction of conditions that can combine to produce an unwanted outcome. Because complex aviation accidents rarely have a single cause, prevention depends on multiple independent safety barriers.</p><p>Examples of barriers include aircraft design, certification, maintenance programs, operating procedures, training, checklists, weather information, air traffic control, terrain-warning systems and emergency response. A strong system does not depend on one barrier being perfect.</p><p>Barrier thinking is useful because barriers can fail in different ways. A technical barrier may be defeated by a hardware failure; a procedural barrier may be weakened by ambiguity; a human barrier may be affected by fatigue; an organisational barrier may fail because hazards were not communicated.</p><p>Recovery is therefore part of prevention. If an unsafe condition develops, the system should provide ways to detect it, stabilise the aircraft and return to a safe state. Go-arounds, diversion decisions, emergency checklists and alternate navigation systems are examples of recovery mechanisms.</p><p>Accident investigation should focus on both immediate causes and deeper contributing conditions. Learning is most valuable when corrective action addresses the system weakness rather than simply blaming the final operator.</p><p>Safety performance can be monitored through incidents, exceedances, unstable approaches, maintenance findings, reports and other indicators.</p><p>The ultimate objective is resilience: the ability of the aviation system to continue operating safely despite predictable failures, disturbances and human error.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Accident Prevention, Safety Barriers and Recovery">
+<title>Accident Prevention, Safety Barriers and Recovery</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 35</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Accident Prevention, Safety Barriers and Recovery</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><path d="M120 430H1080" stroke="#39444f" stroke-width="3"/>
+<path d="M160 400L300 360L440 370L580 315L720 335L860 285L1030 305" fill="none" stroke="#ff5a1f" stroke-width="8"/>
+<path d="M160 420L300 395L440 400L580 370L720 380L860 355L1030 365" fill="none" stroke="#8dffad" stroke-width="7"/>
+<circle cx="580" cy="315" r="17" fill="#ffb24a"/>
+<path d="M580 315V180" stroke="#ffb24a" stroke-width="6" marker-end="url(#a)"/>
+<text x="160" y="510" fill="#cbd3d9" font-family="monospace" font-size="16">THREAT → BARRIER → DETECTION → RECOVERY</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section><section id="s36">
+<div class="section-kicker">SUBJECT 05 · 36</div>
+<h2>Integrated Flight-Safety Management</h2>
+<div class="study-matter"><p>Integrated flight-safety management brings together aircraft engineering, flight operations, maintenance, human factors, weather, air traffic management, emergency response and organisational leadership into one safety system.</p><p>The first step is establishing hazards and safety objectives. Risks are assessed according to their credible consequences and likelihood, after which controls are selected. Controls should preferably eliminate hazards or reduce exposure at the design stage, followed by engineered safeguards, procedures, training and personal or administrative measures where appropriate.</p><p>Safety assurance then checks whether the controls actually work. This requires monitoring performance, investigating occurrences, analysing trends and verifying corrective actions.</p><p>Safety management must also handle change. New aircraft, new routes, new software, staffing changes, airport modifications and procedural revisions can introduce hazards that were not present in the original system. Change should therefore be evaluated before implementation.</p><p>Reporting culture is essential. Personnel need practical mechanisms to report hazards and near misses without creating an environment in which useful information is suppressed. Management must then act on meaningful reports.</p><p>Emergency preparedness provides the final layer when prevention fails. Rescue services, emergency procedures, communication arrangements and contingency planning determine how effectively consequences can be controlled.</p><p>Integrated safety is therefore a continuous cycle: identify, assess, control, monitor, learn and improve. The aircraft may be the visible centre of the system, but flight safety is produced by the interaction of many technical and human components.</p><p>For a safety engineer, the central lesson is that safe flight is not a single procedure. It is the result of coordinated barriers operating across the entire aviation system.</p></div>
+<div class="technical-plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Integrated Flight-Safety Management">
+<title>Integrated Flight-Safety Management</title>
+<rect width="1200" height="650" rx="30" fill="#070a0f"/>
+<text x="54" y="48" fill="#74808b" font-family="monospace" font-size="12" letter-spacing="2">AEROSPACE SAFETY · SUBJECT 05 · 36</text>
+<text x="54" y="91" fill="#f2f5f7" font-family="Arial" font-size="28" font-weight="700">Integrated Flight-Safety Management</text>
+<defs>
+<marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ffb24a"/></marker>
+<marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#7ce7ff"/></marker>
+<marker id="r" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#ff5a1f"/></marker>
+</defs><circle cx="170" cy="340" r="55" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="140" y="347" fill="#7ce7ff" font-family="monospace" font-size="14">IDENTIFY</text>
+<path d="M225 340H300" stroke="#7ce7ff" stroke-width="5" marker-end="url(#b)"/>
+<circle cx="355" cy="340" r="55" fill="#111922" stroke="#ffb24a" stroke-width="5"/><text x="325" y="347" fill="#ffb24a" font-family="monospace" font-size="14">ASSESS</text>
+<path d="M410 340H485" stroke="#ffb24a" stroke-width="5" marker-end="url(#a)"/>
+<circle cx="540" cy="340" r="55" fill="#111922" stroke="#ff5a1f" stroke-width="5"/><text x="510" y="347" fill="#ff5a1f" font-family="monospace" font-size="14">CONTROL</text>
+<path d="M595 340H670" stroke="#ff5a1f" stroke-width="5" marker-end="url(#r)"/>
+<circle cx="725" cy="340" r="55" fill="#111922" stroke="#8dffad" stroke-width="5"/><text x="695" y="347" fill="#8dffad" font-family="monospace" font-size="14">ASSURE</text>
+<path d="M780 340H855" stroke="#8dffad" stroke-width="5" marker-end="url(#b)"/>
+<circle cx="910" cy="340" r="55" fill="#111922" stroke="#7ce7ff" stroke-width="5"/><text x="875" y="347" fill="#7ce7ff" font-family="monospace" font-size="14">LEARN</text>
+<text x="270" y="505" fill="#cbd3d9" font-family="monospace" font-size="16">INTEGRATED FLIGHT-SAFETY MANAGEMENT CYCLE</text></svg></div>
+<div class="exam-focus"><strong>EXAMINATION FOCUS</strong>
+<p>Be able to define the principle, explain why it matters to flight safety, identify major failure or hazard pathways, and describe practical prevention, monitoring and recovery measures.</p></div>
+</section></main></div>
+<footer class="footer"><span>AEROSPACE SAFETY · SUBJECT 05</span><span class="signature">Compiled and Designed by <b>Praveen Kunjumon</b></span></footer>
+<script>
+const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}}),{threshold:.05});
+document.querySelectorAll('.reader section').forEach(e=>{e.style.opacity='.12';e.style.transform='translateY(16px)';e.style.transition='opacity .7s ease,transform .7s ease';o.observe(e)});
+</script>
+</body></html>
