@@ -1,0 +1,4 @@
+const filters=document.querySelectorAll('.filter');const cards=document.querySelectorAll('.subject-card');
+filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>{c.style.display=(f==='all'||c.dataset.year===f)?'flex':'none'});document.querySelectorAll('.year-label').forEach((y,i)=>{if(f==='all'){y.style.display='flex'}else{y.style.display=((i+1)==f)?'flex':'none'}})}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}),{threshold:.08});
+document.querySelectorAll('.subject-card,.tl,.manifesto,.timeline').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(18px)';el.style.transition='opacity .65s ease,transform .65s ease';io.observe(el)});
